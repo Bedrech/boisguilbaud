@@ -1,0 +1,32 @@
+<header>
+        <div class="navbar">
+            <a href="{{ path('app_main' ) }}"><img class="logo" src="{{ asset('images/logo.png') }}" alt="logo"></a>
+
+            <ul class="navbar-nav">
+                <li><a href="{{ path('app_main' ) }}">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Nos Produits</a>
+                    <div class="dropdown-content">
+                        {% for item in categories %}
+                        <a href="{{ path('app_listing', {'slug': item.slug} ) }}" class="dropdown-toggle" >
+                            {{ item.name }}
+                        </a>
+                        {% endfor %}
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Nos Services</a>
+                    <div class="dropdown-content">
+                        {% for servic in service %}
+                        <a href="{{ path('app_services', {'slug': servic.slug} ) }}" class="dropdown-toggle" >
+                            {{ servic.name }}
+                        </a>
+                    {% endfor %}
+                    </div>
+                </li>
+                <li><a href="{{ path('conseils_index' ) }}">Conseils</a></li>
+                <li><a id="contactheader" href="{{ path('app_contact' ) }}">Contact<br> 05 46 42 31 30</a></li>
+            </ul>
+            <a href="{{ path('cart_index') }}"><img class="imgcart" src="{{ asset('images/panier.png') }}"alt="panier"></a>
+        </div>
+    </header>

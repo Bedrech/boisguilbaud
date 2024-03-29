@@ -1,0 +1,266 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bois Bûches{% endblock %}
+
+{% block body %}
+	<main>
+		<section class="titre">
+			<h1>Bois Bûches</h1>
+		</section>
+		
+		<section>
+				<div class="allitems">
+    {% for item in bois %}
+<form class="formitem" action="{{ path('cart_add', { id: item.id }) }}" method="post">
+			<div class="items">
+            <h1>{{ item.name }}</h1>
+            <p class="test">{{ item.description }}</p>
+            <div class="others">
+                <label>Longueur</label>
+                <select class="longueurSelect">
+                    {% if item.premierelongueur is not null and item.premierelongueur is not empty %}
+                        <option value="{{ item.surplacepremierprix }}">{{ item.premierelongueur }}</option>
+                    {% endif %}
+                    {% if item.deuxiemelongueur is not null and item.deuxiemelongueur is not empty %}
+                        <option value="{{ item.surplacedeuxiemeprix }}">{{ item.deuxiemelongueur }}</option>
+                    {% endif %}
+                    {% if item.troisiemelongueur is not null and item.troisiemelongueur is not empty %}
+                        <option value="{{ item.surplacetroisiemeprix }}">{{ item.troisiemelongueur }}</option>
+                    {% endif %}
+                </select>
+                <label>Livraison</label>
+                <select class="livraisonSelect">
+                    {% if item.surplace is not null and item.surplace is not empty %}
+                        <option value="{{ item.livraisonpremierprix }}">{{ item.surplace }}</option>
+                    {% endif %}
+                    {% if item.livraison is not null and item.livraison is not empty %}
+                        <option value="{{ item.livraisondeuxiemeprix }}">{{ item.livraison }}</option>
+                    {% endif %}
+					
+                </select>
+                <label>Quantité</label>
+    			<input type="number" name="quantite" class="quantite">
+                <p name="priceDisplay" class="priceDisplay">Prix : 0 €</p>
+				<input type="hidden" name="prixfinal" class="prixfinal">
+
+
+    			<button type="submit">Commander</button>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const livraisonSelects = document.querySelectorAll(".livraisonSelect");
+                const longueurSelects = document.querySelectorAll(".longueurSelect");
+                const quantiteInputs = document.querySelectorAll(".quantite");
+                const priceDisplay = document.querySelectorAll(".priceDisplay");
+
+                livraisonSelects.forEach((livraisonSelect, index) => {
+                    livraisonSelect.addEventListener("change", function () {
+                        updateLongueurOptions(index);
+                        updatePrice(index);
+                    });
+                });
+
+                longueurSelects.forEach((longueurSelect, index) => {
+                    longueurSelect.addEventListener("change", () => updatePrice(index));
+                });
+
+                quantiteInputs.forEach((quantiteInput, index) => {
+                    quantiteInput.addEventListener("input", () => updatePrice(index));
+                });
+
+
+
+                function updatePrice(index) {
+					const selectOptionLongueur = parseFloat(longueurSelects[index].value);
+					const quantite = parseInt(quantiteInputs[index].value) || 0;
+					const prixUnitaire = selectOptionLongueur;
+					
+					// Calculating total price
+					const totalPrice = prixUnitaire * quantite;
+
+					// Displaying the total price
+					priceDisplay[index].textContent = totalPrice.toFixed(2) + " €";
+
+					// Updating prixfinal input
+					const prixfinal = document.querySelectorAll(".prixfinal")[index];
+					prixfinal.value = prixUnitaire;
+				}
+
+                function updateLongueurOptions(index) {
+                    const selectedLivraisonValue = livraisonSelects[index].value;
+
+                    // Update the values of the options in the longueur select based on the selected livraison
+                    // You need to update this part according to your specific logic
+                    // This is just a placeholder
+                    if (selectedLivraisonValue === "{{ item.livraisonpremierprix }}") {
+                        longueurSelects[index].innerHTML = `
+                            {% if item.premierelongueur is not null and item.premierelongueur is not empty %}
+                                <option value="{{ item.surplacepremierprix }}">{{ item.premierelongueur }}</option>
+                            {% endif %}
+                            {% if item.deuxiemelongueur is not null and item.deuxiemelongueur is not empty %}
+                                <option value="{{ item.surplacedeuxiemeprix }}">{{ item.deuxiemelongueur }}</option>
+                            {% endif %}
+                            {% if item.troisiemelongueur is not null and item.troisiemelongueur is not empty %}
+                                <option value="{{ item.surplacetroisiemeprix }}">{{ item.troisiemelongueur }}</option>
+                            {% endif %}
+                        `;
+                    } else if (selectedLivraisonValue === "{{ item.livraisondeuxiemeprix }}") {
+                        longueurSelects[index].innerHTML = `
+                            {% if item.premierelongueur is not null and item.premierelongueur is not empty %}
+                                <option value="{{ item.livraisonpremierprix }}">{{ item.premierelongueur }}</option>
+                            {% endif %}
+                            {% if item.deuxiemelongueur is not null and item.deuxiemelongueur is not empty %}
+                                <option value="{{ item.livraisondeuxiemeprix }}">{{ item.deuxiemelongueur }}</option>
+                            {% endif %}
+                            {% if item.troisiemelongueur is not null and item.troisiemelongueur is not empty %}
+                                <option value="{{ item.livraisontroisiemeprix }}">{{ item.troisiemelongueur }}</option>
+                            {% endif %}
+                        `;
+                    }
+                }
+            });
+        </script>
+
+				</form>
+    {% endfor %}
+</div>
+		</section>
+
+		<section class="sterelivrable">
+			<p>
+				Notre bois de chauffage a été sélectionné pour sa qualité. Bois sec 100% feuillus
+								de catégorie 1 comme les essences les plus connues telles que le charme,
+								le hêtre, le chêne ou le frêne. Cette catégorie vous assure ls bois à haute
+								performance calorifique.
+			</p>
+			<p>
+				Nos tarifs comprennent la livraison incluse. Le nombre de stère librable pour
+								garantir cette grille tarifaire dépend du lieu de livraison.<br>
+				Voir ci-dessous la carte:
+			</p>
+			<img src="{{ asset('images/sterelivrable.jpg') }}" alt="stere livrable">
+		</section>
+		<section class="demande">
+			<p>Pour toute autre demande, vous pouvez nous contacter au</p>
+			<p style="color:#f6b730;font-weight:bold">05 46 42 31 30</p>
+			<p>Nous avons également quelques produits comme la relève de chêne</p>
+		</section>
+		<section class="price">
+			<table>
+				<tbody>
+					<tr style="background-color:#f6b730;color:white">
+						<td></td>
+						<td>1 M</td>
+						<td>50 CM</td>
+						<td>33 CM</td>
+						<td>25 CM</td>
+					</tr>
+					<tr style="background-color:rgb(194, 192, 192)">
+						<td>PRIX STERE SUR PLACE TTC</td>
+						<td>- €</td>
+						<td>101.00 €</td>
+						<td>105.00 €</td>
+						<td>- €</td>
+					</tr>
+					<tr style="background-color:rgb(194, 192, 192)">
+						<td>PRIX STERE LIVRE TTC</td>
+						<td>- €</td>
+						<td>105.00 €</td>
+						<td>109.00 €</td>
+						<td>111.00 €</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section class="reduction">
+			<h2>Réduction à partir de 8 stères ( 1 livraison ) : - 3 euros</h2>
+			<div class="reductionrow">
+				<div class="reductionitem reductionleft">
+					<h3>Le choix de nos essences :</h3>
+					<p>
+						Nous commercialisons du
+						<span style="font-weight:bold">bois bûches</span>
+						selon vos souhaits. Nous privilégions clairement la production sur les
+						<span style="font-weight:bold">essences catégorie 1,</span>
+						qui est de loin la
+						                        meilleur adéquation pour le
+						<span style="font-weight:bold">bois de chauffage.</span>
+					</p>
+					<p>
+						Il faut évidemment trouver le meilleur ratio en fonction de la gestion durable
+						                        de nos forêts et donc avoir des ratios cohérents. Les essences de bois livrées
+						                        dépendent de ce que onus offre la forêt.
+					</p>
+				</div>
+				<div class="reductionitem reductionright">
+					<h3>Comment effectuer le Stérage :</h3>
+					<p>
+						Lorsque l'on recoupe un stère de bois en 1m de long en bûches plus courtes,
+						                        le volume apparent diminue car les espaces vides entre les bûches sont mieux
+						                        remplis. On peut dire que "les bûches se tassent".
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="triplebois">
+			<div class="tripleboisrow">
+				<div>
+					<img src="{{ asset('images/triplebois.jpg') }}" alt="stere livrable">
+				</div>
+				<div class="tripleboistext">
+					<p>
+						En 1m,<br>
+						Le stère initial en bûches de 1 mètre de longueur occupe par définition un volume de 1 m3
+					</p><br><br><br><br>
+					<p>
+						En 50cm,<br>
+						Le stère initial en bûchs n'occupe plus que 0.8 m3, lorsque les bûches sont recoupées en 2
+					</p><br><br><br>
+					<p>
+						En 33cm,<br>
+						Le stère initial en bûches n'occupe plus que 0.7 m3, lorsque les bûches sont recoupées en 3
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="secondtable">
+			<table>
+				<tbody>
+					<tr style="background-color:#f6b730;color:white">
+						<td>LONGUEUR DES BÛCHES</td>
+						<td>COEFFICIENT</td>
+						<td>ENCOMBREMENT</td>
+					</tr>
+					<tr style="background-color:rgb(194, 192, 192)">
+						<td>100 cm</td>
+						<td>1.00</td>
+						<td>1.000 m³</td>
+					</tr>
+					<tr style="background-color:rgb(194, 192, 192)">
+						<td>50 cm</td>
+						<td>1.25</td>
+						<td>0.800m³</td>
+					</tr>
+					<tr style="background-color:rgb(194, 192, 192)">
+						<td>33 cm</td>
+						<td>1.43</td>
+						<td>0.700m³</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section class="dernierconseil">
+			<h2>DERNIER CONSEIL PRATIQUE POUR L'UTILISATION DU BOIS DE CHAUFFAGE</h2>
+			<p>
+				Pour une utilisation optimale de votre foyer, il est fortement conseillé de faire rentrer
+				                votre bois au printemps et en été. Cependant, si vous deviez le faire rentrer à
+				                l'automne ou en hiver, ou par temps de pluie, prévoir d'avoir toujours un roulement d'un
+				                stère et de ranger ce  bois à l'extérieur sous un appentis ou couvert d'une bâche
+				                sur le dessus, et non dans un endroit fermé pour un séchage correct.<br><br>
+				<span style="font-weight:bold">Votre cheminée vous en sera reconnaissante et vous
+					                apprécierez les longues veillées devant le feu !</span>
+			</p>
+		</section>
+	</main>
+{% endblock %}

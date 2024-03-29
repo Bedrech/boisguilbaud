@@ -1,0 +1,38 @@
+
+<section>
+        <div class="localisation">
+            <div class="localisationtext">
+                <img style="height:70px;" src="{{ asset('images/logowhite.png') }}" alt="logo">
+                <p>Les établissements GUILBAUD, entreprise familiale, sont situés à La Rochelle en région
+                    Poitou-Charentes. Depuis plus de 30 ans, notre spécialité est la vente de bois bûche,
+                    en livraison ou à prendre sur place, aux particuliers et professionnels ansi que les
+                    travaux d'élagage.
+                </p>
+                <ul>
+                <li style="padding-left:40px">6 rue David Oualle, Fief de la Repentie,</li>
+                <li style="padding-left:40px">17000 La Rochelle</li><br>
+                <li style="padding-left:40px">05 46 42 31 30</li><br>
+                <li style="padding-left:40px">Du lundi au vendredi :<br>9h-12h et 14h-17h30</li>
+                <li style="padding-left:40px"><i>( 16h30 le vendredi )</i></li>
+                </ul>
+                <p>Suivez-nous : <a href=""><img src="{{ asset('images/google.png') }}" alt="google"></a> <a href="https://www.facebook.com/SarlBoisGuilbaud/"><img src="{{ asset('images/facebook.png') }}" alt="facebook"></a></p>
+            </div>
+            <div class="localisationmap" id="map"></div>
+            <script>
+        function initMap() {
+            var myLatLng = {lat: -34.397, lng: 150.644}; // Coordonnées de départ
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: myLatLng,
+                zoom: 8
+            });
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Hello World!'
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHgEVCnGlav3Qmdf4HTaWYFlvz7iJmLrA&callback=initMap"
+    async defer></script>
+        </div>
+    </section>

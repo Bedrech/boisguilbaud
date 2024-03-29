@@ -1,0 +1,2092 @@
+@media only screen and (max-width: 2600px) {
+    *{
+        margin:0;
+        padding:0;
+    }
+    
+    /* header */
+    .navbar {
+        font-size:140%;
+    }
+    /* footer */
+    .foot{
+        font-size:150%;
+    }
+    /* body */
+    .containertext{
+        font-size:210%;
+    }
+
+    /* nouveaute */
+    .nouveaute{
+        font-size:150%;
+    }
+    
+    /* pack economique */
+    .economique{
+        font-size:150%;
+    }
+    
+    /* produits */
+    .produits{
+        font-size:150%;
+    }
+    
+    .produits h2{
+        font-weight:bold;
+        font-size:150%;
+    }
+    
+    .produits a {
+        font-size:150%; 
+    }
+    
+    /* description */
+    .description h2{
+        font-size:250%;
+    }
+
+    .descriptiontext p{
+        font-size:150%;
+    }
+    
+    .change{
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        margin-top:50px;
+    }
+    
+    .changers {
+        font-size:150%;
+    }
+    
+    /* nous choisir */
+    .nouschoisir{
+        font-size:140%;
+    }
+    
+    /* localisation */
+    .localisationtext{
+        font-size:150%;
+    }
+    
+    .localisationtext p {
+        margin-top:20px;
+    }
+    
+    .localisationtext img{
+        height: 40px;
+        padding-right:10px;
+    }
+    
+    .localisationtext li{
+        list-style:none;
+    }
+    
+    .localisationmap{
+        width: 50%;
+        background-color:#f6b730;
+    }
+    
+    
+    /* bois buches */
+    .sterelivrable{
+        font-size:150%;
+    }
+
+    .demande{
+        font-size:200%;
+    }
+    
+    .price table {
+        font-size:150%;
+    }
+    
+    .reduction h3{
+        font-size:150%;
+    }
+    
+    .reductionrow{
+        font-size:140%;
+    }
+    
+    .reductionitem{
+        margin-left:50px;
+        margin-right:50px;
+        width: 40%;
+        padding:10px;
+    }
+        
+    .tripleboisrow{
+        font-size:150%;
+    }
+
+    .secondtable table {
+        font-size:150%;
+    }
+    
+    .dernierconseil{
+        font-size:150%;
+    }
+    
+    .dernierconseil h2{
+        font-size:150%;
+    }
+    
+    /* granules de bois */
+    
+    .granulesitems p{
+        font-size:150%;
+    }
+    
+    /* les fagots */
+    
+    .fagotsitems p {
+        font-size:150%;
+    }
+    
+    /* conseils */
+    
+    .conseils{
+        font-size:150%;
+    }
+    
+    /* nos prestations */
+    .firstnous{
+        font-size:150%;
+    }
+    
+    /* contact */
+    .contactp{
+        text-align:center;
+        padding-bottom:30px;
+        font-size:140%;
+    }
+    
+}
+
+
+@media only screen and (max-width: 1750px) {
+    *{
+        margin:0;
+        padding:0;
+    }
+    
+    /* header */
+    .navbar {
+        font-size:140%;
+    }
+    /* footer */
+    .foot{
+        font-size:150%;
+    }
+    /* body */
+    .containertext{
+        font-size:210%;
+    }
+
+    /* nouveaute */
+    .nouveaute{
+        font-size:150%;
+    }
+    
+    /* pack economique */
+    .economique{
+        font-size:150%;
+    }
+    
+    /* produits */
+    .produits{
+        font-size:150%;
+    }
+    
+    .produits h2{
+        font-weight:bold;
+        font-size:150%;
+    }
+    
+    .produits a {
+        font-size:150%; 
+    }
+    
+    /* description */
+    .description h2{
+        font-size:250%;
+    }
+
+    .descriptiontext p{
+        font-size:150%;
+    }
+    
+    .change{
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        margin-top:50px;
+    }
+    
+    .changers {
+        font-size:150%;
+    }
+    
+    /* nous choisir */
+    .nouschoisir{
+        font-size:140%;
+    }
+    
+    /* localisation */
+    .localisationtext{
+        font-size:150%;
+    }
+    
+    .localisationtext p {
+        margin-top:20px;
+    }
+    
+    .localisationtext img{
+        height: 40px;
+        padding-right:10px;
+    }
+    
+    .localisationtext li{
+        list-style:none;
+    }
+    
+    .localisationmap{
+        width: 50%;
+        background-color:#f6b730;
+    }
+    
+    
+    /* bois buches */
+    .sterelivrable{
+        font-size:150%;
+    }
+
+    .demande{
+        font-size:200%;
+    }
+    
+    .price table {
+        font-size:150%;
+    }
+    
+    .reduction h3{
+        font-size:150%;
+    }
+    
+    .reductionrow{
+        font-size:140%;
+    }
+    
+    .reductionitem{
+        margin-left:50px;
+        margin-right:50px;
+        width: 40%;
+        padding:10px;
+    }
+        
+    .tripleboisrow{
+        font-size:150%;
+    }
+
+    .secondtable table {
+        font-size:150%;
+    }
+    
+    .dernierconseil{
+        font-size:150%;
+    }
+    
+    .dernierconseil h2{
+        font-size:150%;
+    }
+    
+    /* granules de bois */
+    
+    .granulesitems p{
+        font-size:150%;
+    }
+    
+    /* les fagots */
+    
+    .fagotsitems p {
+        font-size:150%;
+    }
+    
+    /* conseils */
+    
+    .conseils{
+        font-size:150%;
+    }
+    
+    /* nos prestations */
+    .firstnous{
+        font-size:125%;
+    }
+    
+    /* contact */
+    .contactp{
+        text-align:center;
+        padding-bottom:30px;
+        font-size:140%;
+    }
+    
+  }
+
+  @media only screen and (max-width: 1560px) {
+    *{
+        margin:0;
+        padding:0;
+    }
+    
+    /* header */
+    .navbar {
+        font-size:140%;
+    }
+    /* footer */
+    .foot{
+        font-size:150%;
+    }
+    /* body */
+    .containertext{
+        font-size:210%;
+    }
+
+    /* nouveaute */
+    .nouveaute{
+        font-size:150%;
+    }
+    
+    /* pack economique */
+    .economique{
+        font-size:150%;
+    }
+    
+    /* produits */
+    .produits{
+        font-size:150%;
+    }
+    
+    .produits h2{
+        font-weight:bold;
+        font-size:150%;
+    }
+    
+    .produits a {
+        font-size:150%; 
+    }
+
+    
+    /* description */
+    .description h2{
+        font-size:250%;
+    }
+
+    .descriptiontext p{
+        font-size:150%;
+    }
+    
+    .change{
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        margin-top:50px;
+    }
+    
+    .changers {
+        font-size:150%;
+    }
+    
+    /* nous choisir */
+    .nouschoisir{
+        font-size:130%;
+    }
+    
+    /* localisation */
+    .localisationtext{
+        font-size:150%;
+    }
+    
+    .localisationtext p {
+        margin-top:20px;
+    }
+    
+    .localisationtext img{
+        height: 40px;
+        padding-right:10px;
+    }
+    
+    .localisationtext li{
+        list-style:none;
+    }
+    
+    .localisationmap{
+        width: 50%;
+        background-color:#f6b730;
+    }
+    
+    
+    /* bois buches */
+    .sterelivrable{
+        font-size:150%;
+    }
+
+    .demande{
+        font-size:200%;
+    }
+    
+    .price table {
+        font-size:150%;
+    }
+    
+    .reduction h3{
+        font-size:150%;
+    }
+    
+    .reductionrow{
+        font-size:140%;
+    }
+    
+    .reductionitem{
+        margin-left:50px;
+        margin-right:50px;
+        width: 40%;
+        padding:10px;
+    }
+        
+    .tripleboisrow{
+        font-size:140%;
+    }
+
+    .secondtable table {
+        font-size:150%;
+    }
+    
+    .dernierconseil{
+        font-size:150%;
+    }
+    
+    .dernierconseil h2{
+        font-size:150%;
+    }
+    
+    /* granules de bois */
+    
+    .granulesitems p{
+        font-size:150%;
+    }
+    
+    /* les fagots */
+    
+    .fagotsitems p {
+        font-size:150%;
+    }
+
+    .demande{
+        height:300px;
+    }
+    
+    /* conseils */
+    
+    .conseils{
+        font-size:150%;
+    }
+    
+    /* nos prestations */
+    .firstnous{
+        font-size:110%;
+    }
+    
+    /* contact */
+    .contactp{
+        text-align:center;
+        padding-bottom:30px;
+        font-size:140%;
+    }
+    
+  }
+
+  @media only screen and (max-width: 1450px) {
+    *{
+        margin:0;
+        padding:0;
+    }
+    
+    /* header */
+    .navbar {
+        font-size:140%;
+    }
+    /* footer */
+    .foot{
+        font-size:150%;
+    }
+    /* body */
+    .containertext{
+        font-size:210%;
+    }
+
+    /* nouveaute */
+    .nouveaute{
+        font-size:150%;
+    }
+    
+    /* pack economique */
+    .economique{
+        font-size:150%;
+    }
+    
+    /* produits */
+    .produits{
+        font-size:150%;
+    }
+    
+    .produits h2{
+        font-weight:bold;
+        font-size:150%;
+    }
+    
+    .produits a {
+        font-size:150%; 
+    }
+
+    
+    /* description */
+    .description h2{
+        font-size:250%;
+    }
+
+    .descriptiontext p{
+        font-size:150%;
+    }
+    
+    .change{
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        margin-top:50px;
+    }
+    
+    .changers {
+        font-size:150%;
+    }
+    
+    /* nous choisir */
+    .nouschoisir {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 100%;
+        text-align: center;
+        margin-top: 50px;
+        width: 100%;
+        font-size:130%;
+    }
+    
+    .nouschoisir li{
+        font-size:110%;
+    }
+
+    .first img {
+        width: 100% ;
+    }
+
+    
+    /* localisation */
+    .localisationtext{
+        font-size:150%;
+    }
+    
+    .localisationtext p {
+        margin-top:20px;
+    }
+    
+    .localisationtext img{
+        height: 40px;
+        padding-right:10px;
+    }
+    
+    .localisationtext li{
+        list-style:none;
+    }
+    
+    .localisationmap{
+        width: 50%;
+        background-color:#f6b730;
+    }
+    
+    
+    /* bois buches */
+    .sterelivrable{
+        font-size:150%;
+    }
+
+    .demande{
+        font-size:200%;
+    }
+    
+    .price table {
+        font-size:150%;
+    }
+    
+    .reduction h3{
+        font-size:150%;
+    }
+    
+    .reductionrow{
+        font-size:140%;
+    }
+    
+    .reductionitem{
+        margin-left:50px;
+        margin-right:50px;
+        width: 40%;
+        padding:10px;
+    }
+        
+    .tripleboisrow{
+        font-size:140%;
+    }
+
+    .secondtable table {
+        font-size:150%;
+    }
+    
+    .dernierconseil{
+        font-size:150%;
+    }
+    
+    .dernierconseil h2{
+        font-size:150%;
+    }
+    
+    /* granules de bois */
+    
+    .granulesitems p{
+        font-size:150%;
+    }
+    
+    /* les fagots */
+    
+    .fagotsitems p {
+        font-size:150%;
+    }
+
+    .demande{
+        height:300px;
+    }
+    
+    /* conseils */
+    
+    .conseils{
+        font-size:150%;
+    }
+    
+    /* nos prestations */
+    .firstnous{
+        font-size:110%;
+    }
+    
+    /* contact */
+    .contactp{
+        text-align:center;
+        padding-bottom:30px;
+        font-size:140%;
+    }
+    
+  }
+
+  @media only screen and (max-width: 1400px) {
+    
+    /* nous choisir */
+    .nouschoisir {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 100%;
+        text-align: center;
+        margin-top: 50px;
+        width: 100%;
+        font-size:120%;
+    }
+    
+    .nouschoisir li{
+        font-size:110%;
+    }
+
+    .first img {
+        width: 100% ;
+    }
+
+    /* localisation */
+    .localisation{
+        display:flex;
+        flex-direction:row;
+        text-align:left;
+        justify-content:space-evenly;
+        margin-left:5%;
+        margin-right:5%;
+        margin-top:50px;
+        margin-bottom:50px;
+    }
+
+    .localisationtext{
+        font-size:150%;
+    }
+    
+    .localisationtext p {
+        margin-top:20px;
+    }
+    
+    .localisationtext img{
+        height: 40px;
+        padding-right:10px;
+    }
+    
+    .localisationtext li{
+        list-style:none;
+    }
+    
+    .localisationmap{
+        width: 50%;
+        background-color:#f6b730;
+    }
+    
+    
+    /* bois buches */
+    .sterelivrable{
+        font-size:150%;
+    }
+
+    .demande{
+        font-size:200%;
+    }
+    
+    .price table {
+        font-size:150%;
+    }
+    
+    .reduction h3{
+        font-size:150%;
+    }
+    
+    .reductionrow{
+        font-size:140%;
+    }
+    
+    .reductionitem{
+        margin-left:50px;
+        margin-right:50px;
+        width: 40%;
+        padding:10px;
+    }
+        
+    .tripleboisrow{
+        font-size:140%;
+    }
+
+    .secondtable table {
+        font-size:150%;
+    }
+    
+    .dernierconseil{
+        font-size:150%;
+    }
+    
+    .dernierconseil h2{
+        font-size:150%;
+    }
+    
+    /* granules de bois */
+    
+    .granulesitems p{
+        font-size:150%;
+    }
+    
+    /* les fagots */
+    
+    .fagotsitems p {
+        font-size:150%;
+    }
+
+    .demande{
+        height:300px;
+    }
+    
+    /* conseils */
+    
+    .conseils{
+        font-size:150%;
+    }
+    
+    /* nos prestations */
+    .firstnous{
+        font-size:110%;
+    }
+    
+    /* contact */
+    .contactp{
+        text-align:center;
+        padding-bottom:30px;
+        font-size:140%;
+    }
+
+    .dernierconseil{
+        background-image: url("../images/planches.jpg");
+        height:105%;
+        color:white;
+        text-shadow: 1px 1px 1px black;
+        text-align:center;
+        padding-top:20px;
+        padding-left:40px;
+        padding-right:40px;
+    }
+    
+}
+
+@media only screen and (max-width: 1200px) {
+
+    /* conseils */
+
+.conseils img{
+    width:70%;
+}
+
+}
+
+@media only screen and (max-width: 1150px) {
+    
+    /* header */
+    .navbar {
+        font-size:125%;
+    }
+
+    .change{
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        margin-top:50px;
+    }
+    
+    .changers {
+        font-size:130%;
+    }
+
+    /* nous choisir */
+    .nouschoisir {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 100%;
+        text-align: center;
+        margin-top: 50px;
+        width: 100%;
+        font-size:120%;
+    }
+    
+    .nouschoisir li{
+        font-size:110%;
+    }
+
+    .first img {
+        width: 100% ;
+    }
+
+    /* bois buches */
+.titre{
+    text-align:center;
+    padding-top:90px;
+    height: 300px;
+    color:#f6b730;
+    text-shadow:6px 7px 4px rgba(0, 0, 0, 0.96);
+    background-image: url("../images/fondforets.jpeg");
+    background-position: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.titre h1{
+    font-size:300%;
+    font-weight:bold;
+    padding-top:40px;
+}
+
+.sterelivrable{
+    text-align:center;
+    margin-left:10%;
+    margin-right:10%;
+    margin-top:30px;
+}
+
+.sterelivrable p{
+    margin-bottom:40px;
+}
+
+.demande{
+    height:250px;
+    color:white;
+    margin-top:30px;
+    text-shadow:1px 1px 1px black;
+    text-align:center;
+    padding-top:50px;
+    font-size:150%;
+    background-image: url("../images/logs.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    padding-left:30px;
+    padding-right:30px;
+}
+
+.price table {
+    border-collapse: collapse;
+    width: 70%;
+    font-size:110%;
+    margin: 0 auto;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+th, td {
+    border: 1px solid white;
+    padding: 12px;
+    text-align: center;
+}
+
+.reduction h2{
+    text-align:center;
+    font-weight:bold;
+    color:#f6b730;
+    padding-bottom:10px;
+}
+
+.reduction h3{
+    text-align:center;
+    font-weight:bold;
+    color:#f6b730;
+}
+
+.reductionrow{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+}
+
+.reductionitem{
+    margin-left:50px;
+    margin-right:50px;
+    width: 40%;
+    padding:10px;
+}
+
+.reductionleft{
+    border-bottom: 5px solid #f6b730;
+    border-right: 5px solid #f6b730;
+    /* border-left: 5px solid #f6b730; */
+    border-radius:30px;
+}
+
+.reductionright{
+    border-bottom: 5px solid #f6b730;
+    border-left: 5px solid #f6b730;
+    /* border-right: 5px solid #f6b730; */
+    /* box-shadow:1px 1px 1px black; */
+    border-radius:30px;
+}
+
+.tripleboisrow{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    box-shadow: 0px 0px 19px 8px rgba(0,0,0,0.75);
+    width: 70%;
+    font-size:120%;
+    margin: 0 auto;
+    margin-top:50px;
+    padding-top:20px;
+    border-radius:20px;
+}
+
+.tripleboistext{
+    padding-top:40px;
+    margin-left:30px;
+}
+
+.secondtable table {
+    border-collapse: collapse;
+    width: 70%;
+    font-size:110%;
+    margin: 0 auto;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+.dernierconseil{
+    background-image: url("../images/planches.jpg");
+    height:105%;
+    color:white;
+    text-shadow: 1px 1px 1px black;
+    text-align:center;
+    padding-top:20px;
+    padding-left:40px;
+    padding-right:40px;
+}
+
+.dernierconseil h2{
+    color:#f6b730;
+}
+
+.allitems{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content:space-evenly;
+    width: 95%;
+    margin-top:20px;
+    margin-left:50%;
+    transform: translateX(-50%);
+}
+
+.items{
+    display:flex;
+    flex-direction:column;
+    width: calc(33.33% - 20px);
+    padding:20px;
+    border:1px solid black;
+    border-radius:10px;
+    margin-bottom:20px;
+    background-color:rgb(233, 233, 233);
+
+}
+
+.items h1{
+    font-size:130%;
+    text-align:center;
+    font-weight:bold;
+    height: 60px;
+    color:#f6b730;
+}
+
+.others{
+    display:flex;
+    flex-direction:column;
+    margin-top: auto;
+}
+
+.items select{
+    border: 1px solid black;
+    border-radius:5px;
+}
+
+.items input{
+    border: 1px solid black;
+    border-radius:5px;
+}
+
+.items button{
+    border: 1px solid black;
+    border-radius:5px;
+}
+
+.items button:hover{
+    background-color:grey;
+}
+
+  }
+
+  @media only screen and (max-width: 800px) {
+    .navbar{
+        padding-left:0;
+        padding-right:0;
+    }
+
+        /* conseils */
+
+.conseilstitre{
+    text-align:center;
+    padding-top:90px;
+    height: 250px;
+    color:#f6b730;
+    text-decoration:underline;
+    font-weight:bold;
+}
+
+.conseils{
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    width:80%;
+}
+
+.conseils h2{
+    color:#f6b730;
+    text-decoration:underline;
+    font-weight:bold;
+    padding-bottom:25px;
+}
+
+.conseils ul{
+    text-align:left;
+    padding-top:20px;
+    padding-bottom:20px;
+    border-bottom-left-radius:20px;
+    border-bottom:2px solid rgb(102, 102, 102);
+    border-left:2px solid rgb(102, 102, 102);
+    box-shadow: 10px -10px 20px 2px rgba(0,0,0,0.66);
+    border-top-right-radius:20px;
+    border-top-left-radius:10px;
+    border-bottom-right-radius:10px;
+    padding-left:35px;
+    padding-right:5px;
+    margin-bottom:45px;
+}
+
+.conseils li{
+    padding-top:10px;
+    margin-bottom:10px;
+}
+
+/* ramonage */
+
+.ramonagetexte{
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    width:80%;
+}
+
+.ramonagetexte h2{
+    color:#f6b730;
+    font-weight:bold;
+    text-decoration:underline;
+}
+
+.ramonagetexte h3{
+    color:#c49228;
+}
+
+.ramonagetexte ul{
+    width:90%;
+    margin-top:25px;
+    margin-bottom:25px;
+    padding-left:20px;
+    margin-left:5%;
+    box-shadow: -7px 2px 16px 4px rgba(0,0,0,0.4);
+    border-radius:20px;
+    padding:20px;
+}
+
+.ramonagetexte li{
+    font-size:120%;
+    padding-bottom:5px;
+    padding-top:5px;
+    margin-left:20px;
+    text-align:left;
+}
+
+.localisation{
+    display:flex;
+    flex-direction:row;
+    text-align:left;
+    justify-content:space-evenly;
+    margin-left:2%;
+    margin-right:2%;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+}
+
+  @media only screen and (max-width: 750px) {
+
+    /* header */
+    .navbar {
+        font-size:100%;
+        padding-left:0;
+        padding-right:0;
+    }
+
+    .navbar img{
+        height: 40px;
+    }
+    /* footer */
+    .foot{
+        font-size:100%;
+    }
+    /* body */
+    .containertext{
+        font-size:210%;
+    }
+
+    /* nouveaute */
+    .nouveaute{
+        font-size:150%;
+    }
+    
+    /* pack economique */
+    .economique{
+        font-size:150%;
+    }
+    
+    /* produits */
+    .produits{
+        font-size:140%;
+    }
+    
+    .produits h2{
+        font-weight:bold;
+        font-size:120%;
+    }
+    
+    .produits a {
+        font-size:130%; 
+    }
+    
+    /* description */
+    .description h2{
+        font-size:250%;
+    }
+
+    .descriptiontext p{
+        font-size:150%;
+    }
+    
+    .change{
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        margin-top:50px;
+    }
+    
+    .changers {
+        font-size:150%;
+    }
+    
+    /* nous choisir */
+    .nouschoisir {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 100%;
+        text-align: center;
+        margin-top: 50px;
+        width: 100%;
+        font-size:130%;
+    }
+    
+    .nouschoisir li{
+        font-size:110%;
+    }
+
+    .first img {
+        width: 0px ;
+    }
+
+    .second{
+        width: 100%;
+    }
+
+    
+    /* localisation */
+    .localisationtext{
+        font-size:120%;
+    }
+    
+    .localisationtext p {
+        margin-top:20px;
+    }
+    
+    .localisationtext img{
+        height: 40px;
+        padding-right:10px;
+    }
+    
+    .localisationtext li{
+        list-style:none;
+    }
+    
+    .localisationmap{
+        width: 50%;
+        background-color:#f6b730;
+    }
+    
+    
+    /* bois buches */
+
+    .sterelivrable {
+        text-align: center;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 30px;
+        font-size:150%;
+    }
+
+    .sterelivrable img{
+        height: 200px;
+    }
+
+    .demande{
+        font-size:200%;
+    }
+    
+    .price table {
+        font-size:150%;
+    }
+    
+    .reduction h3{
+        font-size:150%;
+    }
+    
+    .reductionrow{
+        font-size:120%;
+    }
+    
+    .reductionitem{
+        margin-left:20px;
+        margin-right:20px;
+        width: 50%;
+        padding:10px;
+    }
+        
+    .tripleboisrow {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        box-shadow: 0px 0px 19px 8px rgba(0,0,0,0.75);
+        width: 90%;
+        font-size:110%;
+        margin: 0 auto;
+        margin-top: 50px;
+        padding-top: 20px;
+        border-radius: 20px;
+    }
+
+    .secondtable table {
+        font-size:150%;
+    }
+    
+    .dernierconseil{
+        font-size:150%;
+    }
+    
+    .dernierconseil h2{
+        font-size:150%;
+    }
+    
+    /* granules de bois */
+    
+    .granulesitems p{
+        font-size:150%;
+    }
+    
+    /* les fagots */
+    
+    .fagotsitems p {
+        font-size:150%;
+    }
+
+    .demande{
+        height:300px;
+    }
+    
+ 
+    /* conseils */
+
+.conseilstitre{
+    text-align:center;
+    padding-top:90px;
+    height: 250px;
+    color:#f6b730;
+    text-decoration:underline;
+    font-weight:bold;
+}
+
+.conseils{
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    width:80%;
+}
+
+.conseils h2{
+    color:#f6b730;
+    text-decoration:underline;
+    font-weight:bold;
+    padding-bottom:25px;
+}
+
+.conseils ul{
+    text-align:left;
+    padding-top:20px;
+    padding-bottom:20px;
+    border-bottom-left-radius:20px;
+    border-bottom:2px solid rgb(102, 102, 102);
+    border-left:2px solid rgb(102, 102, 102);
+    box-shadow: 10px -10px 20px 2px rgba(0,0,0,0.66);
+    border-top-right-radius:20px;
+    border-top-left-radius:10px;
+    border-bottom-right-radius:10px;
+    padding-left:35px;
+    padding-right:5px;
+    margin-bottom:45px;
+}
+
+.conseils li{
+    padding-top:10px;
+    margin-bottom:10px;
+}
+    
+    /* nos prestations */
+    .firstnous{
+        font-size:110%;
+    }
+    
+    /* contact */
+    .contactp{
+        text-align:center;
+        padding-bottom:30px;
+        font-size:140%;
+    }
+    
+  }
+
+  @media only screen and (max-width: 600px) {
+    .logo{
+        display:none;
+    }
+}
+
+  @media only screen and (max-width: 550px) {
+
+    /* header */
+    .navbar {
+        font-size:90%;
+    }
+    
+    /* footer */
+    .foot{
+        font-size:100%;
+    }
+    /* body */
+    .containertext{
+        font-size:210%;
+    }
+
+    /* nouveaute */
+    .nouveaute{
+        font-size:150%;
+    }
+    
+    /* pack economique */
+    .economique{
+        font-size:150%;
+    }
+    
+    /* produits */
+    .produits{
+        font-size:140%;
+    }
+    
+    .produits h2{
+        font-weight:bold;
+        font-size:120%;
+    }
+    
+    .produits a {
+        font-size:130%; 
+    }
+    
+    /* description */
+    .description h2{
+        font-size:250%;
+    }
+
+    .descriptiontext p{
+        font-size:150%;
+    }
+    
+    .change{
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        margin-top:50px;
+    }
+    
+    .changers {
+        font-size:150%;
+    }
+    
+    /* nous choisir */
+    .nouschoisir {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 100%;
+        text-align: center;
+        margin-top: 50px;
+        width: 100%;
+        font-size:130%;
+    }
+    
+    .nouschoisir li{
+        font-size:110%;
+    }
+
+    .first img {
+        width: 0px ;
+    }
+
+    .second{
+        width: 100%;
+    }
+
+    
+    /* localisation */
+    .localisationtext{
+        font-size:120%;
+    }
+    
+    .localisationtext p {
+        margin-top:20px;
+    }
+    
+    .localisationtext img{
+        height: 40px;
+        padding-right:10px;
+    }
+    
+    .localisationtext li{
+        list-style:none;
+    }
+    
+    .localisationmap{
+        width: 50%;
+        background-color:#f6b730;
+    }
+    
+    
+    /* bois buches */
+
+    .sterelivrable {
+        text-align: center;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 30px;
+        font-size:150%;
+    }
+
+    .sterelivrable img{
+        height: 200px;
+    }
+
+    .demande{
+        font-size:200%;
+    }
+    
+    .price table {
+        font-size:110%;
+    }
+    
+    .reduction h3{
+        font-size:150%;
+    }
+    
+    .reductionrow{
+        font-size:120%;
+    }
+    
+    .reductionitem{
+        margin-left:20px;
+        margin-right:20px;
+        width: 50%;
+        padding:10px;
+    }
+
+    .tripleboisrow {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        box-shadow: 0px 0px 19px 8px rgba(0,0,0,0.75);
+        width: 90%;
+        font-size:110%;
+        margin: 0 auto;
+        margin-top: 50px;
+        padding-top: 20px;
+        border-radius: 20px;
+    }
+
+    .secondtable table {
+        font-size:100%;
+    }
+    
+    .dernierconseil{
+        font-size:125%;
+    }
+    
+    .dernierconseil h2{
+        font-size:150%;
+    }
+    
+    /* granules de bois */
+    
+    .granulesitems p{
+        font-size:150%;
+    }
+    
+    /* les fagots */
+    
+    .fagotsitems p {
+        font-size:150%;
+    }
+
+    .demande{
+        height:100%;
+    }
+    
+    /* conseils */
+    
+    .conseils{
+        font-size:150%;
+    }
+    
+    /* nos prestations */
+    .firstnous{
+        font-size:110%;
+    }
+    
+    /* contact */
+    .contactp{
+        text-align:center;
+        padding-bottom:30px;
+        font-size:140%;
+    }
+    
+    .allitems{
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction:row;
+        justify-content:space-evenly;
+        width: 95%;
+        margin-top:20px;
+        margin-left:50%;
+        transform: translateX(-50%);
+    }
+    
+    .items{
+        display:flex;
+        flex-direction:column;
+        width: calc(33.33% - 20px);
+        padding:20px;
+        border:1px solid black;
+        border-radius:10px;
+        margin-bottom:20px;
+        background-color:rgb(233, 233, 233);
+    
+    }
+    
+    .items h1{
+        font-size:110%;
+        text-align:center;
+        font-weight:bold;
+        height: 60px;
+        color:#f6b730;
+        margin-bottom:20px;
+    }
+    
+    .others{
+        display:flex;
+        flex-direction:column;
+        margin-top: auto;
+    }
+    
+    .items select{
+        border: 1px solid black;
+        border-radius:5px;
+    }
+    
+    .items input{
+        border: 1px solid black;
+        border-radius:5px;
+    }
+    
+    .items button{
+        border: 1px solid black;
+        border-radius:5px;
+    }
+    
+    .items button:hover{
+        background-color:grey;
+    }
+
+    /* ramonage */
+
+.ramonagetexte{
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    width:95%;
+}
+
+.ramonagetexte h2{
+    color:#f6b730;
+    font-weight:bold;
+    text-decoration:underline;
+}
+
+.ramonagetexte h3{
+    color:#c49228;
+}
+
+.ramonagetexte ul{
+    width:90%;
+    margin-top:25px;
+    margin-bottom:25px;
+    padding-left:20px;
+    margin-left:5%;
+    box-shadow: -7px 2px 16px 4px rgba(0,0,0,0.4);
+    border-radius:20px;
+    padding:20px;
+}
+
+.ramonagetexte li{
+    font-size:120%;
+    padding-bottom:5px;
+    padding-top:5px;
+    margin-left:20px;
+    text-align:left;
+}
+
+.formlogin {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-top:50px;
+    margin-bottom:50px;
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.formlogin h1{
+    text-decoration:underline;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.formlogin input{
+    margin-bottom:20px;
+}
+
+  }
+
+  @media only screen and (max-width: 450px) {
+
+    /* header */
+    .navbar {
+        font-size:60%;
+        font-weight:bold;
+    }
+
+    .logo{
+        height: 0px;
+    }
+    /* footer */
+    .foot{
+        font-size:100%;
+    }
+    /* body */
+    .containertext{
+        font-size:210%;
+    }
+
+    /* nouveaute */
+    .nouveaute{
+        font-size:150%;
+    }
+    
+    /* pack economique */
+    .economique{
+        font-size:150%;
+    }
+    
+    /* produits */
+    .produits{
+        font-size:140%;
+    }
+    
+    .produits h2{
+        font-weight:bold;
+        font-size:120%;
+    }
+    
+    .produits a {
+        font-size:130%; 
+    }
+    
+    /* description */
+    .description h2{
+        font-size:250%;
+    }
+
+    .descriptiontext p{
+        font-size:150%;
+    }
+    
+    .change{
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        margin-top:50px;
+    }
+    
+    .changers {
+        font-size:150%;
+    }
+    
+    /* nous choisir */
+    .nouschoisir {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 100%;
+        text-align: center;
+        margin-top: 50px;
+        width: 100%;
+        font-size:130%;
+    }
+    
+    .nouschoisir li{
+        font-size:110%;
+    }
+
+    .first img {
+        width: 0px ;
+    }
+
+    .second{
+        width: 100%;
+    }
+
+    
+    /* localisation */
+    .localisationtext{
+        font-size:120%;
+    }
+    
+    .localisationtext p {
+        margin-top:20px;
+    }
+    
+    .localisationtext img{
+        height: 40px;
+        padding-right:10px;
+    }
+    
+    .localisationtext li{
+        list-style:none;
+    }
+    
+    .localisationmap{
+        width: 50%;
+        background-color:#f6b730;
+    }
+    
+    
+    /* bois buches */
+
+    .sterelivrable {
+        text-align: center;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 30px;
+        font-size:150%;
+    }
+
+    .sterelivrable img{
+        height: 150px;
+    }
+
+    .demande{
+        font-size:200%;
+    }
+    
+    .price table {
+        font-size:85%;
+    }
+    
+    .reduction h3{
+        font-size:150%;
+    }
+    
+    .reductionrow{
+        font-size:120%;
+    }
+    
+    .reductionitem{
+        margin-left:20px;
+        margin-right:20px;
+        width: 50%;
+        padding:10px;
+    }
+
+    .tripleboisrow {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        box-shadow: 0px 0px 19px 8px rgba(0,0,0,0.75);
+        width: 95%;
+        font-size:95%;
+        margin: 0 auto;
+        margin-top: 50px;
+        padding-top: 20px;
+        border-radius: 20px;
+    }
+
+    .secondtable table {
+        font-size:80%;
+    }
+    
+    .dernierconseil{
+        font-size:125%;
+    }
+    
+    .dernierconseil h2{
+        font-size:150%;
+    }
+    
+    /* granules de bois */
+    
+    .granulesitems p{
+        font-size:150%;
+    }
+    
+    /* les fagots */
+    
+    .fagotsitems p {
+        font-size:150%;
+    }
+
+    .demande{
+        height:100%;
+    }
+    
+        /* conseils */
+
+.conseilstitre{
+    text-align:center;
+    padding-top:90px;
+    height: 250px;
+    color:#f6b730;
+    text-decoration:underline;
+    font-weight:bold;
+}
+
+.conseils{
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    width:95%;
+}
+
+.conseils h2{
+    color:#f6b730;
+    text-decoration:underline;
+    font-weight:bold;
+    padding-bottom:25px;
+}
+
+.conseils ul{
+    text-align:left;
+    padding-top:20px;
+    padding-bottom:20px;
+    border-bottom-left-radius:20px;
+    border-bottom:2px solid rgb(102, 102, 102);
+    border-left:2px solid rgb(102, 102, 102);
+    box-shadow: 10px -10px 20px 2px rgba(0,0,0,0.66);
+    border-top-right-radius:20px;
+    border-top-left-radius:10px;
+    border-bottom-right-radius:10px;
+    padding-left:35px;
+    padding-right:5px;
+    margin-bottom:45px;
+}
+
+.conseils li{
+    padding-top:10px;
+    margin-bottom:10px;
+}
+    
+    /* nos prestations */
+    .firstnous{
+        font-size:110%;
+    }
+    
+    /* contact */
+    .contactp{
+        text-align:center;
+        padding-bottom:30px;
+        font-size:140%;
+    }
+    
+    .allitems{
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction:row;
+        justify-content:space-evenly;
+        width: 95%;
+        margin-top:20px;
+        margin-left:50%;
+        transform: translateX(-50%);
+    }
+    
+    .items{
+        display:flex;
+        flex-direction:column;
+        width: calc(33.33% - 20px);
+        padding:10px;
+        border:1px solid black;
+        border-radius:10px;
+        margin-bottom:20px;
+        background-color:rgb(233, 233, 233);
+    
+    }
+    
+    .items h1{
+        font-size:100%;
+        text-align:center;
+        font-weight:bold;
+        height: 60px;
+        color:#f6b730;
+        margin-bottom:30px;
+    }
+
+    .items p {
+        font-size:80%;
+    }
+    
+    .others{
+        display:flex;
+        flex-direction:column;
+        margin-top: auto;
+    }
+    
+    .items select{
+        border: 1px solid black;
+        border-radius:5px;
+    }
+    
+    .items input{
+        border: 1px solid black;
+        border-radius:5px;
+    }
+    
+    .items button{
+        border: 1px solid black;
+        border-radius:5px;
+        font-size:80%;
+    }
+    
+    .items button:hover{
+        background-color:grey;
+    }
+  }

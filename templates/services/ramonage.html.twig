@@ -1,0 +1,187 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ramonage{% endblock %}
+
+{% block body %}
+	<main>
+    <section class="titre">
+        <h1>Ramonage</h1>
+    </section>
+
+  <section>
+				<div class="allitems">
+    {% for item in ramonage %}
+<form class="formitem" action="{{ path('cart_add', { id: item.id }) }}" method="post">
+			<div class="items">
+            <h1>{{ item.name }}</h1>
+            <p class="test">{{ item.description }}</p>
+            <div class="others">
+                <label>Longueur</label>
+                <select class="longueurSelect">
+                    {% if item.premierelongueur is not null and item.premierelongueur is not empty %}
+                        <option value="{{ item.surplacepremierprix }}">{{ item.premierelongueur }}</option>
+                    {% endif %}
+                    {% if item.deuxiemelongueur is not null and item.deuxiemelongueur is not empty %}
+                        <option value="{{ item.surplacedeuxiemeprix }}">{{ item.deuxiemelongueur }}</option>
+                    {% endif %}
+                    {% if item.troisiemelongueur is not null and item.troisiemelongueur is not empty %}
+                        <option value="{{ item.surplacetroisiemeprix }}">{{ item.troisiemelongueur }}</option>
+                    {% endif %}
+                </select>
+                <label>Livraison</label>
+                <select class="livraisonSelect">
+                    {% if item.surplace is not null and item.surplace is not empty %}
+                        <option value="{{ item.livraisonpremierprix }}">{{ item.surplace }}</option>
+                    {% endif %}
+                    {% if item.livraison is not null and item.livraison is not empty %}
+                        <option value="{{ item.livraisondeuxiemeprix }}">{{ item.livraison }}</option>
+                    {% endif %}
+					
+                </select>
+                <label>Quantité</label>
+    			<input type="number" name="quantite" class="quantite">
+                <p name="priceDisplay" class="priceDisplay">Prix : 0 €</p>
+				<input type="hidden" name="prixfinal" class="prixfinal">
+
+
+    			<button type="submit">Commander</button>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const livraisonSelects = document.querySelectorAll(".livraisonSelect");
+                const longueurSelects = document.querySelectorAll(".longueurSelect");
+                const quantiteInputs = document.querySelectorAll(".quantite");
+                const priceDisplay = document.querySelectorAll(".priceDisplay");
+
+                livraisonSelects.forEach((livraisonSelect, index) => {
+                    livraisonSelect.addEventListener("change", function () {
+                        updateLongueurOptions(index);
+                        updatePrice(index);
+                    });
+                });
+
+                longueurSelects.forEach((longueurSelect, index) => {
+                    longueurSelect.addEventListener("change", () => updatePrice(index));
+                });
+
+                quantiteInputs.forEach((quantiteInput, index) => {
+                    quantiteInput.addEventListener("input", () => updatePrice(index));
+                });
+
+
+
+                function updatePrice(index) {
+					const selectOptionLongueur = parseFloat(longueurSelects[index].value);
+					const quantite = parseInt(quantiteInputs[index].value) || 0;
+					const prixUnitaire = selectOptionLongueur;
+					
+					// Calculating total price
+					const totalPrice = prixUnitaire * quantite;
+
+					// Displaying the total price
+					priceDisplay[index].textContent = totalPrice.toFixed(2) + " €";
+
+					// Updating prixfinal input
+					const prixfinal = document.querySelectorAll(".prixfinal")[index];
+					prixfinal.value = prixUnitaire;
+				}
+
+                function updateLongueurOptions(index) {
+                    const selectedLivraisonValue = livraisonSelects[index].value;
+
+                    // Update the values of the options in the longueur select based on the selected livraison
+                    // You need to update this part according to your specific logic
+                    // This is just a placeholder
+                    if (selectedLivraisonValue === "{{ item.livraisonpremierprix }}") {
+                        longueurSelects[index].innerHTML = `
+                            {% if item.premierelongueur is not null and item.premierelongueur is not empty %}
+                                <option value="{{ item.surplacepremierprix }}">{{ item.premierelongueur }}</option>
+                            {% endif %}
+                            {% if item.deuxiemelongueur is not null and item.deuxiemelongueur is not empty %}
+                                <option value="{{ item.surplacedeuxiemeprix }}">{{ item.deuxiemelongueur }}</option>
+                            {% endif %}
+                            {% if item.troisiemelongueur is not null and item.troisiemelongueur is not empty %}
+                                <option value="{{ item.surplacetroisiemeprix }}">{{ item.troisiemelongueur }}</option>
+                            {% endif %}
+                        `;
+                    } else if (selectedLivraisonValue === "{{ item.livraisondeuxiemeprix }}") {
+                        longueurSelects[index].innerHTML = `
+                            {% if item.premierelongueur is not null and item.premierelongueur is not empty %}
+                                <option value="{{ item.livraisonpremierprix }}">{{ item.premierelongueur }}</option>
+                            {% endif %}
+                            {% if item.deuxiemelongueur is not null and item.deuxiemelongueur is not empty %}
+                                <option value="{{ item.livraisondeuxiemeprix }}">{{ item.deuxiemelongueur }}</option>
+                            {% endif %}
+                            {% if item.troisiemelongueur is not null and item.troisiemelongueur is not empty %}
+                                <option value="{{ item.livraisontroisiemeprix }}">{{ item.troisiemelongueur }}</option>
+                            {% endif %}
+                        `;
+                    }
+                }
+            });
+        </script>
+
+				</form>
+    {% endfor %}
+</div>
+		</section>
+
+
+    <section class="ramonagetexte">
+        <h2>Ramonage obligatoire : démêlons le vrai du faux !</h2>
+        <h3>Depuis le décret de Juin 2023, le ramonage est obligatoire</h3>
+        <p>
+            <b>La loi est claire sur ce sujet :</b>
+            Selon l'article 31-6 du Règlement Sanitaire Départemental Type (RSDT) : 
+            "Les conduits de fumée intérieurs ou extérieurs, fixes ou amovibles, utilisés pour l'évacuation des
+            gaz de la combustion doivent être maintenus constamment en bon état d'entretien et de 
+            fonctionnement et ramonés périodiquement en vue d'assurer le bon fonctionnement des appareils
+            et d'éviter les risques d'incendie et d'émanation de gaz nocifs dans l'habitation,
+            ainsi que le rejet de particules dans l'atmosphère extérieure."<br>
+            Ça c'est noté, enregistré, validé :
+            <b>deux fois par an.</b> Mais pourquoi ?
+            <br> <u style="color:#c49228">On répond à cette question dans cette article.</u>
+        </p>
+        <ul>
+            <li>Sécuriser votre logement</li>
+            <li>Eviter les pannes de matériel</li>
+            <li>Faire des économies d'argent à long terme</li>
+            <li>Préserver l'environnement</li>
+            <li>Remplacez vos équipements de plus de 15 ans</li>
+            <li>
+                Pour un foyer ouvert ou un insert, allumez votre feu par le haut pour une combustion
+                maximale des fumées
+            </li>
+            <li>
+                Contrôlez deux fois par an votre système de chauffe et les conduits.
+                Qui mieux que votre ramoneur ou technicien de maintenance des système de chauffage bois/granulés
+                saura déceler les défauts d'utilisation ou les anomalies de votre installation ?!
+            </li>
+        </ul>
+        <h2>Améliorer votre confort</h2>
+        <p style="color:#c49228; text-decoration:underline">On récapitule :</p>
+        <ul>
+            <li>2 rendez-vous par an</li>
+            <li>Protection de mon foyer et de ma famille</li>
+            <li>Limitation maximale des risques d'incendie et d'intoxication</li>
+            <li>Economies d'énergie</li>
+            <li>Prolongation de la durée de vie de mon équipement</li>
+            <li>Optimisation des performances</li>
+            <li>Contribution à la qualité de l'air de ma commune</li>
+        </ul>
+        <p>
+            La fréquence de ramonage obligatoire c'est 
+            <b>2 fois par an. </b>
+            Pour les conduits de chauffage au bois, granulés, au fioul ou au charbon dont une fois pendant
+            la période de chauffage et l'autre hors saison de chauffe . 
+            La fréquence est annuelle pour les conduits de chauffage au gaz.
+            Vous avez fait l'excellent choix de vous chauffer au bois, en tout ou partie. 
+            De toute évidence, se chauffer au bois, ça implique nécessairement du FEU... Du feu au coeur de
+            votre foyer (sans mauvais jeu de mot). Or du feu au sein de votre logement, ça n'est pas neutre.
+            Vous devez obligatoirement contrôler cette énergie ! Elle vous offre le confort à condition
+            de la maîtriser et d'en surveiller les effets.
+        </p>
+    </section>
+    </main>
+{% endblock %}

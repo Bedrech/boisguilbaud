@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil
+{% endblock %}
+
+{% block body %}
+	<br><br><br><br><br>
+	<main>
+		<section class="panier">
+			<h1><u>Panier</u></h1>
+
+			<form action="{{ path('cart_email') }}" method="post">
+				<table>
+					<thead>
+						<tr>
+							<th>Produit</th>
+							<th>Prix</th>
+							<th>Quantité</th>
+							<th>Total</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for element in data %}
+                            <tr>
+                                <td>{{ element.product.name }}</td>
+								<td>{{ element.prixFinal }} €</td>
+                                <td>{{ element.quantite }}</td>
+
+                                <td>{{ element.quantite * element.prixFinal }} €</td>
+                                <td>
+                                    <a class="plus" href="{{ path('cart_add', {id: element.product.id}) }}">+</a>
+                                    <a class="moins" href="{{ path('cart_remove', {id: element.product.id}) }}">-</a>
+                                    <a class="supprimer" href="{{ path('cart_delete', {id: element.product.id}) }}">Supprimer</a>
+                                </td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td >Votre panier est vide</td>
+                            </tr>
+                        {% endfor %}
+
+					</tbody>
+					<tfoot>
+						<td>Total</td>
+						<td></td>
+						<td></td>
+						<td>{{ total }} €</td>
+						<td>
+						</td>
+					</tfoot>
+				</table>
+                <input name="nom" placeholder="nom">
+                <input type="email" name="email" placeholder="email" required>
+                <input name="adresse" placeholder="adresse">
+                <input name="ville" placeholder="ville">
+                <input type="tel" name="telephone" placeholder="numéro de téléphone" pattern="[0-9]{10}" required>
+                <br>
+				<button type="submit">Commander</button>
+			</form>
+		</section>
+	</main>
+{% endblock %}

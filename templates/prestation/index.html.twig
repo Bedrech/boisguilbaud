@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos Prestations{% endblock %}
+
+{% block body %}
+    <main>
+        <section class="nous">
+            <h1>A propos de nous</h1>
+            <div class="nousrow">
+                <div class="firstnous">
+                    <p>
+                        Forts de plus de 30 ans d'expérience et de savoir-faire en tant que 
+                        <span style="color:#f6b730">fournisseurs de bois de chauffage</span>
+                        de renom à La Rochelle en région Poitou-Charentes,
+                        les établissements GUILBAUD vous assure des prestations de qualités.
+                        Proposant à la
+                        <span style="color:#f6b730">vente de bois de bûche</span>
+                        en livraison ou à prendre sur place, aux particuliers comme aux professionnels,
+                        notre entreprise familiale répond aux demandes de ses clients.
+                    </p>
+                    <p>
+                        Outre la <span style="font-weight:bold">vente de bois de chauffage,</span>
+                        les établissements GUILBAUD vous propose également les travaux d'élagage
+                        à La Rochelle et ses alentours.
+                        Nos élagueurs experts vous assureront des interventions sérurisées et ds chantiers propres.
+                    </p>
+                </div>
+                <div class="secondnous">
+                    <img src="{{ asset('images/nous.jpg') }}" alt="a propos de nous">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="secondrow">
+                <div class="sapo">
+                    <p>
+                        <span style="color:#f6b730;font-size:150%">30</span><br>
+                        Années d'expérience
+                    </p>
+                </div>
+                <div class="sapo">
+                    <p>
+                        <span style="color:#f6b730;font-size:150%">60</span><br>
+                        Chantiers réalisés
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

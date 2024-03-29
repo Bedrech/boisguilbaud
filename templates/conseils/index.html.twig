@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Conseils{% endblock %}
+
+{% block body %}
+    <main>
+        <section class="conseilstitre">
+            <h1>Nos conseils</h1>
+        </section>
+        <section class="conseils">
+            <h2>Comment bien choisir et utiliser votre bois ?</h2>
+            <ul>
+                <li>
+                    Brûlez du bois bien sec ( avec un taux d'humidité inférieur à 23% ) avec le moins d'écorce
+                    possible.
+                </li>
+                <li class="test">
+                    Utilisez de préférence des bûches fendus.
+                </li>
+                <li>
+                    Ne brûlez pas des bois traités ! Les vieux meubles, les agglomérés,
+                    les bois récupérés sur des chantiers dégagent des polluants très nocifs lorsqu'ils
+                    sont brûlés.
+                </li>
+                <li>
+                    Rentrez le bois à brûler 48 heures à l'avance.
+                </li>
+                <li>
+                    Fiez-vous aux marques de qualités pour acheter votre bois.
+                </li>
+            </ul>
+
+            <h2>Comment bien utiliser votre appareil ?</h2>
+            <ul>
+                <li>
+                    Ne surchargez pas le foyer.
+                </li>
+                <li>
+                    Allumez votre feu par le haut.
+                </li>
+                <li>
+                    Réglez le tirage pour obtenir la meilleure combustion possible : ouvrez toutes les entrées
+                    d'air à l'allumage ou lors du rechargement, réduisez les entrées d'air quand le feu a bien
+                    pris sans jamais les fermer entièrement , même la nuit.
+                </li>
+                <li>
+                    Respectez les consignes d'utilisation données par le fabricant.
+                </li>
+                <li>
+                    Nettoyez votre appareil et videz le cendrier fréquemment.
+                </li>
+            </ul>
+
+            <h2>Comment bien stocker votre bois ?</h2>
+            <ul>
+                <li>
+                    Si vous le coupez vous-même ou que vous achetez du bois qui n'est pas encore bien sec
+                    ( avec un taux d'humidité supérieur à 23% ), vous ne pouvez pas l'utiliser tout de suite .
+                    Respectez les conseils de votre vendeur ou, à défaut, laissez
+                    <b>sécher les bûches 18 mois minimum après la coupe.</b>
+                </li>
+                <li>
+                    Pour que votre bois sèche dans de bonnes conditions ou reste bien sec, 
+                    il faut le stocker à l'abri de la pluie, dans un endroit bien aéré, sans contact direct
+                    avec le sol ( sur des palettes par exemple ).
+                </li>
+                <li>
+                    Les sacs de granulés sont particulièrement sensibles à l'humidité . 
+                    Ils doivent être stockés à l'intérieur, dans un endroit sec et aéré, 
+                    de préférence surélevés ( sur une palette par exemple ).
+                </li>
+                <p style="color:blue;padding-left:20px;">"Un stockage à l'abri de l'humidité"</p>
+                <img src="{{ asset('images/infographieconseil.png') }}">
+            </ul>
+        </section>
+    </main>
+{% endblock %}

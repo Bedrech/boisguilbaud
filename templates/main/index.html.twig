@@ -1,0 +1,156 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+<main>
+    <section>
+        <div class="image-container">
+            <div class="containertext">
+                <h1>BOIS GUILBAUD</h1>
+                <p>à votre service depuis 30 ans</p><br>
+                <button class="button1"><a class="link" href="{{ path('app_contact' ) }}">Contactez-nous par mail</a></button>
+                <button class="button2"><a class="link" href="{{ path('app_contact' ) }}">05 46 42 31 30</a></button>
+            </div>
+        </div>
+    </section>
+    <section>
+    <div class="nouveaute">
+        <h2>Nouveauté 2024</h2>
+        <div class="row">
+            <div class="item">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="item">
+                <h3>Lorem ipsum</h3>
+                <img src="{{ asset('images/logo.png') }}" alt="logo">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="economique">
+        <h2>Pack Economique</h2>
+         <div class="centero">
+            <div class="itemeconomique">
+            <h3>Lorem ipsum</h3>
+            <img src="{{ asset('images/logo.png') }}" alt="logo"><br><br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        </div>
+         </div>
+    </section>
+    <section class="produits">
+        <h2>Nos Produits et Services</h2>
+        <div class="row">
+            <div class="produitsitem">
+            <a href="{{ path('app_bois_buches') }}"><img src="{{ asset('images/boisbuches.png') }}" alt="bois buche"></a><br>
+                <a href="{{ path('app_bois_buches') }}">Bois Bûches</a><br>
+                <p>Notre bois de chauffage a été sélectionné pour sa qualité.
+                Bois 100% feuillus en charme, hêtre, chêne ou frêne.</p>
+            </div>
+            <div class="produitsitem">
+                <a href="{{ path('app_granules') }}"><img src="{{ asset('images/granulesdebois.png') }}" alt="granulés de bois"></a><br>
+                <a href="{{ path('app_granules') }}">Granulés de Bois</a><br>
+                <p>Nos granulés de bois sont DIN + et de fabircation fançaise afin de
+                vous garantir la meilleure qualité de pellets.</p>
+            </div>
+            <div class="produitsitem">
+                <a href="{{ path('app_fagots') }}"><img src="{{ asset('images/fagot.png') }}" alt="les fagots"></a><br>
+                <a href="{{ path('app_fagots') }}">Les Fagots</a><br>
+                <p>Découvrez notre sélection de fagots, de la charbonnette à la délignure
+                de chêne. N'attendez plus !</p>
+            </div>
+            <div class="produitsitem">
+                <a href="{{ path('app_allumage') }}"><img src="{{ asset('images/allumage.png') }}" alt="allumage"></a><br>
+                <a href="{{ path('app_allumage') }}">Allumage</a><br>
+                <p>Pour vous faciliter l'allumage de vos feux. Nous vous proposons
+                des allumes-feu écologique et du petit bois d'allumage, c'est par ici !</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="produitsitem">
+                <a href="{{ path('app_elagage') }}"><img src="{{ asset('images/elagageabattage.png') }}" alt="elagage abattage"></a><br>
+                <a href="{{ path('app_elagage') }}">Elagage-Abattage</a><br>
+                <p>Nous disposons d'une expérience dans l'élagage et l'abattage.
+                Nous procédons environ à une soixantaine de chantiers par an.</p>
+            </div>
+            <div class="produitsitem">
+                <a href="{{ path('app_rognage') }}"><img src="{{ asset('images/rognagesouche.png') }}" alt="rognage souche"></a><br>
+                <a href="{{ path('app_rognage') }}">Rognage souche</a><br>
+                <p>Le rognage des souches n'a pas de secret pour nous . Nous possédons
+                une rogneuse FSI Frankan B-30.</p>
+            </div>
+            <div class="produitsitem">
+                <a href=""><img src="{{ asset('images/ameublementjardin.png') }}" alt="ameublement jardin"></a><br>
+                <a href="">Ameublement jardin</a><br>
+                <p>Pour l'ameublement de votre jardin, nous vous garantissons
+                des produits de qualités. Abri-bûches, bacs potager, piquets etc...</p>
+            </div>
+            <div class="produitsitem">
+                <a href="{{ path('contact_index') }}"><img src="{{ asset('images/devis.png') }}" alt="devis sur mesure"></a><br>
+                <a href="{{ path('contact_index') }}">Devis sur mesure</a><br>
+                <p>Nos devis sont adaptés à vos besoins et vos attentes !
+                Faites appel à nos services !</p>
+            </div>
+        </div>
+    </section>
+    <section class="description">
+        <h2>Bienvenue chez<br><span style="color:#f6b730; font-size:130%;"> BOIS GUILBAUD</span></h2><br>
+        <div class="descriptiontext">
+            <p>La SARL BOIS GUILBAUD, est une entreprise familiale située à La Rochelle.<br><br>
+            <span style="font-weight:bold">Depuis plus de 30 ans,</span> notre spécialité est la <span style="font-weight:bold">vente de bois bûches, </span>
+            en livraison ou à prendre sur place, à destination des particuliers et des professionnels.
+            Soucieux de satisfaire au mieux notre clientèle, <span style="font-weight:bold">nous commercialisons du bois
+            de qualité principalement chêne er charme en provenance des régions Charente, Dordogne et Touraine.</span>
+        </p>
+        <p>
+        Nous effectuons également les <span style="font-weight:bold">travaux d'élagage et d'abattage d'arbre sur tous types.</span>
+        Notre savoir-faire, notre ponctualité ainsi que la propreté de nos chantiers font de nous un acteur majeur sur la CDA Rochelaise.
+        </p> 
+        </div>
+        <div class="change">
+            <div class="changers">
+                <p id="annee" class="changerstext">{{ changers[0].annee }}</p>
+                <p>Années d'expérience</p>
+            </div>
+            <div class="changers">
+                <p class="changerstext">{{ changers[0].steres }}</p>
+                <p>Stères par an</p>
+            </div>
+            <div class="changers">
+                <p class="changerstext">{{ changers[0].livraisons }}</p>
+                <p>Livraison par an</p>
+            </div>
+            <div class="changers">
+                <p class="changerstext">{{ changers[0].chantiers }}</p>
+                <p>Chantiers réalisés</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="nouschoisir">
+            <div class="first">
+                <img src="{{ asset('images/hache.jpg') }}" alt="pourquoi nous choisir">
+            </div>
+            <div class="second">
+                <h2>Pourquoi nous choisir</h2><br>
+                <p>Si l'entreprise Bois Guilbaud existe et perdure depuis plus de 30ans, c'est que nous
+                sommes engagés sur les points suivants :
+            </p>
+            <ul>
+                <li><img src="{{ asset('images/check.png') }}" alt="check">Qualités de nos produits avec une gamme complète</li>
+                <li><img src="{{ asset('images/check.png') }}" alt="check">Expertise et professionalisme de nos domaines</li>
+                <li><img src="{{ asset('images/check.png') }}" alt="check">Ponctualités et rigueur de nos livraisons et chantiers</li>
+                <li><img src="{{ asset('images/check.png') }}" alt="check">Propreté et tenue irréprochable de nos équipes</li>
+            </ul>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

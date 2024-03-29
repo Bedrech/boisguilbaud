@@ -3,3 +3,67 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+main_index:
+    path: /main
+    controller: App\Controller\MainController::index
+
+conseils_index:
+    path: /conseils
+    controller: App\Controller\ConseilsController::index
+
+contact_index:
+    path: /contact
+    controller: App\Controller\ContactController::index
+
+prestation_index:
+    path: /prestation
+    controller: App\Controller\PrestationController::index
+
+espacevert_index:
+    path: /espace_vert
+    controller: App\Controller\EspaceVertController::index
+        
+app_login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+
+app_logout:
+    path: /logout
+    controller: App\Controller\SecurityController::logout
+
+app_bois_buches:
+    path: /bois-buches
+    controller: App\Controller\ListingController::boisBuches
+
+app_allumage:
+    path: /allumage
+    controller: App\Controller\ListingController::allumage
+    
+app_elagage:
+    path: /elagage
+    controller: App\Controller\ListingController::elagage
+
+app_granules:
+    path: /granules
+    controller: App\Controller\ListingController::granules
+
+app_fagots:
+    path: /fagots
+    controller: App\Controller\ListingController::fagots
+
+app_rognage:
+    path: /rognage
+    controller: App\Controller\ListingController::rognage
+
+app_cuisson:
+    path: /cuisson
+    controller: App\Controller\ListingController::acuisson
+
+app_pizza:
+    path: /pizza
+    controller: App\Controller\ListingController::apizza
+
+app_brazero:
+    path: /brazero
+    controller: App\Controller\ListingController::brazero
