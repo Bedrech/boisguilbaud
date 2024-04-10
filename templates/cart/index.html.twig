@@ -1,7 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Accueil
-{% endblock %}
+{% block title %}Panier{% endblock %}
 
 {% block body %}
 	<br><br><br><br><br>
@@ -21,6 +20,7 @@
 						</tr>
 					</thead>
 					<tbody>
+					{# boucle pour afficher tout les produits mis dans le panier #}
 						{% for element in data %}
                             <tr>
                                 <td>{{ element.product.name }}</td>
@@ -34,6 +34,7 @@
                                     <a class="supprimer" href="{{ path('cart_delete', {id: element.product.id}) }}">Supprimer</a>
                                 </td>
                             </tr>
+							{# si le panier est vide #}
                         {% else %}
                             <tr>
                                 <td >Votre panier est vide</td>

@@ -13,10 +13,10 @@ class ArticlesController extends AbstractController
     #[Route('/{slug}', name: 'articles.index', methods: ['GET'])]
     public function index(ArticlesRepository $articles, string $slug): Response
     {
-        // Find the article by slug
+        // On trouve l'article par son slug
         $article = $articles->findOneBy(['slug' => $slug]);
         
-        // Render the template dynamically based on the slug
+        // On redirige vers la page d'article
         return $this->render('listing/' . $slug . '.html.twig', [
             'article' => $article,
         ]);

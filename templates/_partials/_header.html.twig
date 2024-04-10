@@ -4,9 +4,11 @@
 
             <ul class="navbar-nav">
                 <li><a href="{{ path('app_main' ) }}">Accueil</a></li>
+                {# dropdown de tout les produits #}
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">Nos Produits</a>
                     <div class="dropdown-content">
+                        {# boucle pour afficher tout les produits #}
                         {% for item in categories %}
                         <a href="{{ path('app_listing', {'slug': item.slug} ) }}" class="dropdown-toggle" >
                             {{ item.name }}
@@ -14,9 +16,11 @@
                         {% endfor %}
                     </div>
                 </li>
+                {# dropdown de tout les services #}
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">Nos Services</a>
                     <div class="dropdown-content">
+                        {# boucle pour afficher tout les services #}
                         {% for servic in service %}
                         <a href="{{ path('app_services', {'slug': servic.slug} ) }}" class="dropdown-toggle" >
                             {{ servic.name }}

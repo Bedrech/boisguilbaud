@@ -25,7 +25,7 @@ class ListingController extends AbstractController
             'bois' => $productsitems->findBy(['type' => 'bois-buche']),
             'allumage' => $productsitems->findBy(['type' => 'allumage']),
             'elagage' => $productsitems->findBy(['type' => 'elagage']),
-            'granules' => $productsitems->findBy(['type' => 'granules-de-bois']),
+            'granules' => $productsitems->findBy(['type' => 'granules']),
             'fagots' => $productsitems->findBy(['type' => 'fagots']),
             'rognage' => $productsitems->findBy(['type' => 'rognage-souche']),
             'cuisson' => $productsitems->findBy(['type' => 'cuisson']),
@@ -67,7 +67,7 @@ class ListingController extends AbstractController
     #[Route('/granules', name: 'app_granules')]
     public function granules(ProductsRepository $productsRepository): Response
     {
-        $granules = $productsRepository->findBy(['type' => 'granules-de-bois']);
+        $granules = $productsRepository->findBy(['type' => 'granules']);
 
         return $this->render('listing/granules-de-bois.html.twig', [
             'granules' => $granules,

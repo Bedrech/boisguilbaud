@@ -9,44 +9,42 @@
 		</section>
 		
 		<section>
-				<div class="allitems">
-    {% for item in bois %}
-<form class="formitem" action="{{ path('cart_add', { id: item.id }) }}" method="post">
-			<div class="items">
-            <h1>{{ item.name }}</h1>
-            <p class="test">{{ item.description }}</p>
-            <div class="others">
-                <label>Longueur</label>
-                <select class="longueurSelect">
-                    {% if item.premierelongueur is not null and item.premierelongueur is not empty %}
-                        <option value="{{ item.surplacepremierprix }}">{{ item.premierelongueur }}</option>
-                    {% endif %}
-                    {% if item.deuxiemelongueur is not null and item.deuxiemelongueur is not empty %}
-                        <option value="{{ item.surplacedeuxiemeprix }}">{{ item.deuxiemelongueur }}</option>
-                    {% endif %}
-                    {% if item.troisiemelongueur is not null and item.troisiemelongueur is not empty %}
-                        <option value="{{ item.surplacetroisiemeprix }}">{{ item.troisiemelongueur }}</option>
-                    {% endif %}
-                </select>
-                <label>Livraison</label>
-                <select class="livraisonSelect">
-                    {% if item.surplace is not null and item.surplace is not empty %}
-                        <option value="{{ item.livraisonpremierprix }}">{{ item.surplace }}</option>
-                    {% endif %}
-                    {% if item.livraison is not null and item.livraison is not empty %}
-                        <option value="{{ item.livraisondeuxiemeprix }}">{{ item.livraison }}</option>
-                    {% endif %}
-					
-                </select>
-                <label>Quantité</label>
-    			<input type="number" name="quantite" class="quantite">
-                <p name="priceDisplay" class="priceDisplay">Prix : 0 €</p>
-				<input type="hidden" name="prixfinal" class="prixfinal">
-
-
-    			<button type="submit">Commander</button>
-            </div>
-        </div>
+			<div class="allitems">
+            {# boucle pour afficher tout les produits de type bois buche #}
+    			{% for item in bois %}
+					<form class="formitem" action="{{ path('cart_add', { id: item.id }) }}" method="post">
+						<div class="items">
+							<h1>{{ item.name }}</h1>
+							<p class="test">{{ item.description }}</p>
+							<div class="others">
+								<label>Longueur</label>
+								<select class="longueurSelect">
+									{% if item.premierelongueur is not null and item.premierelongueur is not empty %}
+										<option value="{{ item.surplacepremierprix }}">{{ item.premierelongueur }}</option>
+									{% endif %}
+									{% if item.deuxiemelongueur is not null and item.deuxiemelongueur is not empty %}
+										<option value="{{ item.surplacedeuxiemeprix }}">{{ item.deuxiemelongueur }}</option>
+									{% endif %}
+									{% if item.troisiemelongueur is not null and item.troisiemelongueur is not empty %}
+										<option value="{{ item.surplacetroisiemeprix }}">{{ item.troisiemelongueur }}</option>
+									{% endif %}
+								</select>
+								<label>Livraison</label>
+								<select class="livraisonSelect">
+									{% if item.surplace is not null and item.surplace is not empty %}
+										<option value="{{ item.livraisonpremierprix }}">{{ item.surplace }}</option>
+									{% endif %}
+									{% if item.livraison is not null and item.livraison is not empty %}
+										<option value="{{ item.livraisondeuxiemeprix }}">{{ item.livraison }}</option>
+									{% endif %}
+								</select>
+								<label>Quantité</label>
+								<input type="number" name="quantite" class="quantite">
+								<p name="priceDisplay" class="priceDisplay">Prix : 0 €</p>
+								<input type="hidden" name="prixfinal" class="prixfinal">
+								<button type="submit">Commander</button>
+							</div>
+					</div>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const livraisonSelects = document.querySelectorAll(".livraisonSelect");
@@ -76,23 +74,18 @@
 					const quantite = parseInt(quantiteInputs[index].value) || 0;
 					const prixUnitaire = selectOptionLongueur;
 					
-					// Calculating total price
 					const totalPrice = prixUnitaire * quantite;
 
-					// Displaying the total price
 					priceDisplay[index].textContent = totalPrice.toFixed(2) + " €";
 
-					// Updating prixfinal input
 					const prixfinal = document.querySelectorAll(".prixfinal")[index];
 					prixfinal.value = prixUnitaire;
 				}
 
+				// change le prix si l'utilisateur choisi l'option Livraison
                 function updateLongueurOptions(index) {
                     const selectedLivraisonValue = livraisonSelects[index].value;
 
-                    // Update the values of the options in the longueur select based on the selected livraison
-                    // You need to update this part according to your specific logic
-                    // This is just a placeholder
                     if (selectedLivraisonValue === "{{ item.livraisonpremierprix }}") {
                         longueurSelects[index].innerHTML = `
                             {% if item.premierelongueur is not null and item.premierelongueur is not empty %}
@@ -130,13 +123,13 @@
 		<section class="sterelivrable">
 			<p>
 				Notre bois de chauffage a été sélectionné pour sa qualité. Bois sec 100% feuillus
-								de catégorie 1 comme les essences les plus connues telles que le charme,
-								le hêtre, le chêne ou le frêne. Cette catégorie vous assure ls bois à haute
-								performance calorifique.
+				de catégorie 1 comme les essences les plus connues telles que le charme,
+				le hêtre, le chêne ou le frêne. Cette catégorie vous assure ls bois à haute
+				performance calorifique.
 			</p>
 			<p>
 				Nos tarifs comprennent la livraison incluse. Le nombre de stère librable pour
-								garantir cette grille tarifaire dépend du lieu de livraison.<br>
+				garantir cette grille tarifaire dépend du lieu de livraison.<br>
 				Voir ci-dessous la carte:
 			</p>
 			<img src="{{ asset('images/sterelivrable.jpg') }}" alt="stere livrable">
@@ -183,22 +176,21 @@
 						<span style="font-weight:bold">bois bûches</span>
 						selon vos souhaits. Nous privilégions clairement la production sur les
 						<span style="font-weight:bold">essences catégorie 1,</span>
-						qui est de loin la
-						                        meilleur adéquation pour le
+						qui est de loin la meilleur adéquation pour le
 						<span style="font-weight:bold">bois de chauffage.</span>
 					</p>
 					<p>
 						Il faut évidemment trouver le meilleur ratio en fonction de la gestion durable
-						                        de nos forêts et donc avoir des ratios cohérents. Les essences de bois livrées
-						                        dépendent de ce que onus offre la forêt.
+						de nos forêts et donc avoir des ratios cohérents. Les essences de bois livrées
+						dépendent de ce que onus offre la forêt.
 					</p>
 				</div>
 				<div class="reductionitem reductionright">
 					<h3>Comment effectuer le Stérage :</h3>
 					<p>
 						Lorsque l'on recoupe un stère de bois en 1m de long en bûches plus courtes,
-						                        le volume apparent diminue car les espaces vides entre les bûches sont mieux
-						                        remplis. On peut dire que "les bûches se tassent".
+						le volume apparent diminue car les espaces vides entre les bûches sont mieux
+						remplis. On peut dire que "les bûches se tassent".
 					</p>
 				</div>
 			</div>
@@ -254,12 +246,12 @@
 			<h2>DERNIER CONSEIL PRATIQUE POUR L'UTILISATION DU BOIS DE CHAUFFAGE</h2>
 			<p>
 				Pour une utilisation optimale de votre foyer, il est fortement conseillé de faire rentrer
-				                votre bois au printemps et en été. Cependant, si vous deviez le faire rentrer à
-				                l'automne ou en hiver, ou par temps de pluie, prévoir d'avoir toujours un roulement d'un
-				                stère et de ranger ce  bois à l'extérieur sous un appentis ou couvert d'une bâche
-				                sur le dessus, et non dans un endroit fermé pour un séchage correct.<br><br>
+				votre bois au printemps et en été. Cependant, si vous deviez le faire rentrer à
+				l'automne ou en hiver, ou par temps de pluie, prévoir d'avoir toujours un roulement d'un
+				stère et de ranger ce  bois à l'extérieur sous un appentis ou couvert d'une bâche
+				sur le dessus, et non dans un endroit fermé pour un séchage correct.<br><br>
 				<span style="font-weight:bold">Votre cheminée vous en sera reconnaissante et vous
-					                apprécierez les longues veillées devant le feu !</span>
+				apprécierez les longues veillées devant le feu !</span>
 			</p>
 		</section>
 	</main>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Bois Guilbaud{% endblock %}</title>
 
         <!-- Bootstrap -->
         <link rel="stylesheet" href="{{ asset('bootstrap/bootstrap.min.css') }}">
@@ -15,9 +15,13 @@
     </head>
     <body>
         <div id="wrapper">
+            {# header #}
             {{render(controller('App\\Controller\\Api\\CategoryController::index'))}}
+            {# body #}
             {% block body %}{% endblock %}
+            {# localisation #}
             {% include '_partials/_localisation.html.twig' %}
+            {# footer #}
             {% include '_partials/_footer.html.twig' %}
         </div>
         <script src="{{ asset('js/style.js') }}"></script>

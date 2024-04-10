@@ -26,7 +26,6 @@ class CartController extends AbstractController
 
         $panier = $session->get('panier', []);
 
-        // on initialise des variables
         $data = [];
         $total = 0;
 
@@ -40,10 +39,9 @@ class CartController extends AbstractController
                 'quantite' => $quantite,
                 'prixFinal' => $prixFinal,
             ];
-            // Calculer le total pour chaque produit et l'ajouter au total général
+            // On calcule le total pour chaque produit et on l'ajoute au total général
             $total += $prixFinal * $quantite;
         }
-
         
         return $this->render('cart/index.html.twig', compact('data', 'total'));
     }
@@ -207,8 +205,8 @@ public function sendEmail(
 
     // Créer l'e-mail
     $email = (new Email())
-        ->from('votre_adresse_email@example.com')
-        ->to('jr17000@live.fr')
+        ->from($email)
+        ->to()
         ->subject("Commande de $nom")
         ->html($contenuEmail);
 

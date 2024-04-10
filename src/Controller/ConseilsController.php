@@ -12,7 +12,6 @@ class ConseilsController extends AbstractController
     public function index(): Response
     {
         return $this->render('conseils/index.html.twig', [
-            'controller_name' => 'ConseilsController',
         ]);
     }
 }

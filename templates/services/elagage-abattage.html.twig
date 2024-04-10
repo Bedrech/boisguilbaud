@@ -8,45 +8,42 @@
         <h1>Elagage Abattage</h1>
     </section>
     
-<section>
-				<div class="allitems">
-    {% for item in elagage %}
-<form class="formitem" action="{{ path('cart_add', { id: item.id }) }}" method="post">
-			<div class="items">
-            <h1>{{ item.name }}</h1>
-            <p class="test">{{ item.description }}</p>
-            <div class="others">
-                <label>Longueur</label>
-                <select class="longueurSelect">
-                    {% if item.premierelongueur is not null and item.premierelongueur is not empty %}
-                        <option value="{{ item.surplacepremierprix }}">{{ item.premierelongueur }}</option>
-                    {% endif %}
-                    {% if item.deuxiemelongueur is not null and item.deuxiemelongueur is not empty %}
-                        <option value="{{ item.surplacedeuxiemeprix }}">{{ item.deuxiemelongueur }}</option>
-                    {% endif %}
-                    {% if item.troisiemelongueur is not null and item.troisiemelongueur is not empty %}
-                        <option value="{{ item.surplacetroisiemeprix }}">{{ item.troisiemelongueur }}</option>
-                    {% endif %}
-                </select>
-                <label>Livraison</label>
-                <select class="livraisonSelect">
-                    {% if item.surplace is not null and item.surplace is not empty %}
-                        <option value="{{ item.livraisonpremierprix }}">{{ item.surplace }}</option>
-                    {% endif %}
-                    {% if item.livraison is not null and item.livraison is not empty %}
-                        <option value="{{ item.livraisondeuxiemeprix }}">{{ item.livraison }}</option>
-                    {% endif %}
-					
-                </select>
-                <label>Quantité</label>
-    			<input type="number" name="quantite" class="quantite">
-                <p name="priceDisplay" class="priceDisplay">Prix : 0 €</p>
-				<input type="hidden" name="prixfinal" class="prixfinal">
-
-
-    			<button type="submit">Commander</button>
-            </div>
-        </div>
+    <section>
+	    <div class="allitems">
+            {% for item in elagage %}
+                <form class="formitem" action="{{ path('cart_add', { id: item.id }) }}" method="post">
+			        <div class="items">
+                        <h1>{{ item.name }}</h1>
+                        <p class="test">{{ item.description }}</p>
+                        <div class="others">
+                            <label>Longueur</label>
+                            <select class="longueurSelect">
+                                {% if item.premierelongueur is not null and item.premierelongueur is not empty %}
+                                    <option value="{{ item.surplacepremierprix }}">{{ item.premierelongueur }}</option>
+                                {% endif %}
+                                {% if item.deuxiemelongueur is not null and item.deuxiemelongueur is not empty %}
+                                    <option value="{{ item.surplacedeuxiemeprix }}">{{ item.deuxiemelongueur }}</option>
+                                {% endif %}
+                                {% if item.troisiemelongueur is not null and item.troisiemelongueur is not empty %}
+                                    <option value="{{ item.surplacetroisiemeprix }}">{{ item.troisiemelongueur }}</option>
+                                {% endif %}
+                            </select>
+                            <label>Livraison</label>
+                            <select class="livraisonSelect">
+                                {% if item.surplace is not null and item.surplace is not empty %}
+                                    <option value="{{ item.livraisonpremierprix }}">{{ item.surplace }}</option>
+                                {% endif %}
+                                {% if item.livraison is not null and item.livraison is not empty %}
+                                    <option value="{{ item.livraisondeuxiemeprix }}">{{ item.livraison }}</option>
+                                {% endif %}
+                            </select>
+                            <label>Quantité</label>
+    			            <input type="number" name="quantite" class="quantite">
+                            <p name="priceDisplay" class="priceDisplay">Prix : 0 €</p>
+				            <input type="hidden" name="prixfinal" class="prixfinal">
+    			            <button type="submit">Commander</button>
+                        </div>
+                    </div>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const livraisonSelects = document.querySelectorAll(".livraisonSelect");
@@ -76,23 +73,18 @@
 					const quantite = parseInt(quantiteInputs[index].value) || 0;
 					const prixUnitaire = selectOptionLongueur;
 					
-					// Calculating total price
 					const totalPrice = prixUnitaire * quantite;
 
-					// Displaying the total price
 					priceDisplay[index].textContent = totalPrice.toFixed(2) + " €";
 
-					// Updating prixfinal input
 					const prixfinal = document.querySelectorAll(".prixfinal")[index];
 					prixfinal.value = prixUnitaire;
 				}
 
+                // change le prix si l'utilisateur choisi l'option Livraison
                 function updateLongueurOptions(index) {
                     const selectedLivraisonValue = livraisonSelects[index].value;
 
-                    // Update the values of the options in the longueur select based on the selected livraison
-                    // You need to update this part according to your specific logic
-                    // This is just a placeholder
                     if (selectedLivraisonValue === "{{ item.livraisonpremierprix }}") {
                         longueurSelects[index].innerHTML = `
                             {% if item.premierelongueur is not null and item.premierelongueur is not empty %}
