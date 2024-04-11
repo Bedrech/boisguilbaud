@@ -13,8 +13,7 @@ class ProductsController extends AbstractController
     public function index(ProductsRepository $products): Response
     {
 
-        return $this->render('listing/bois-buches.html.twig',[
-        ]);
+        return $this->render('listing/bois-buches.html.twig');
 
     }
 }
