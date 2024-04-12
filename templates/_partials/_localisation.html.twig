@@ -26,7 +26,8 @@
                 </p>
             </div>
             <div class="localisationmap" id="map"></div>
-            <script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHgEVCnGlav3Qmdf4HTaWYFlvz7iJmLrA&callback=initMap"
+    async defer>
         function initMap() {
             var myLatLng = {lat: -34.397, lng: 150.644}; // Coordonnées de départ
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -40,7 +41,5 @@
             });
         }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHgEVCnGlav3Qmdf4HTaWYFlvz7iJmLrA&callback=initMap"
-    async defer></script>
         </div>
     </section>
