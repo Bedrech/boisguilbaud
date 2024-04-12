@@ -15,7 +15,6 @@ class ServicesController extends AbstractController
     #[Route('/services/{slug}', name: 'app_services')]
     public function index(
         Services $services,
-        Products $products,
         ProductsRepository $productsitems
     ): Response
     {
