@@ -12,7 +12,6 @@ class EspaceVertController extends AbstractController
     public function index(): Response
     {
         return $this->render('espace_vert/index.html.twig', [
-            'controller_name' => 'EspaceVertController',
         ]);
     }
 }

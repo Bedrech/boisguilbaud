@@ -8,24 +8,6 @@
     .navbar {
         font-size:140%;
     }
-    /* footer */
-    .foot{
-        font-size:150%;
-    }
-    /* body */
-    .containertext{
-        font-size:210%;
-    }
-
-    /* nouveaute */
-    .nouveaute{
-        font-size:150%;
-    }
-    
-    /* pack economique */
-    .economique{
-        font-size:150%;
-    }
     
     /* produits */
     .produits{
@@ -64,29 +46,6 @@
     /* nous choisir */
     .nouschoisir{
         font-size:140%;
-    }
-    
-    /* localisation */
-    .localisationtext{
-        font-size:150%;
-    }
-    
-    .localisationtext p {
-        margin-top:20px;
-    }
-    
-    .localisationtext img{
-        height: 40px;
-        padding-right:10px;
-    }
-    
-    .localisationtext li{
-        list-style:none;
-    }
-    
-    .localisationmap{
-        width: 50%;
-        background-color:#f6b730;
     }
     
     
@@ -177,24 +136,6 @@
     .navbar {
         font-size:140%;
     }
-    /* footer */
-    .foot{
-        font-size:150%;
-    }
-    /* body */
-    .containertext{
-        font-size:210%;
-    }
-
-    /* nouveaute */
-    .nouveaute{
-        font-size:150%;
-    }
-    
-    /* pack economique */
-    .economique{
-        font-size:150%;
-    }
     
     /* produits */
     .produits{
@@ -234,30 +175,7 @@
     .nouschoisir{
         font-size:140%;
     }
-    
-    /* localisation */
-    .localisationtext{
-        font-size:150%;
-    }
-    
-    .localisationtext p {
-        margin-top:20px;
-    }
-    
-    .localisationtext img{
-        height: 40px;
-        padding-right:10px;
-    }
-    
-    .localisationtext li{
-        list-style:none;
-    }
-    
-    .localisationmap{
-        width: 50%;
-        background-color:#f6b730;
-    }
-    
+        
     
     /* bois buches */
     .sterelivrable{
@@ -345,24 +263,6 @@
     .navbar {
         font-size:140%;
     }
-    /* footer */
-    .foot{
-        font-size:150%;
-    }
-    /* body */
-    .containertext{
-        font-size:210%;
-    }
-
-    /* nouveaute */
-    .nouveaute{
-        font-size:150%;
-    }
-    
-    /* pack economique */
-    .economique{
-        font-size:150%;
-    }
     
     /* produits */
     .produits{
@@ -402,31 +302,7 @@
     /* nous choisir */
     .nouschoisir{
         font-size:130%;
-    }
-    
-    /* localisation */
-    .localisationtext{
-        font-size:150%;
-    }
-    
-    .localisationtext p {
-        margin-top:20px;
-    }
-    
-    .localisationtext img{
-        height: 40px;
-        padding-right:10px;
-    }
-    
-    .localisationtext li{
-        list-style:none;
-    }
-    
-    .localisationmap{
-        width: 50%;
-        background-color:#f6b730;
-    }
-    
+    }    
     
     /* bois buches */
     .sterelivrable{
@@ -518,24 +394,6 @@
     .navbar {
         font-size:140%;
     }
-    /* footer */
-    .foot{
-        font-size:150%;
-    }
-    /* body */
-    .containertext{
-        font-size:210%;
-    }
-
-    /* nouveaute */
-    .nouveaute{
-        font-size:150%;
-    }
-    
-    /* pack economique */
-    .economique{
-        font-size:150%;
-    }
     
     /* produits */
     .produits{
@@ -591,31 +449,6 @@
     .first img {
         width: 100% ;
     }
-
-    
-    /* localisation */
-    .localisationtext{
-        font-size:150%;
-    }
-    
-    .localisationtext p {
-        margin-top:20px;
-    }
-    
-    .localisationtext img{
-        height: 40px;
-        padding-right:10px;
-    }
-    
-    .localisationtext li{
-        list-style:none;
-    }
-    
-    .localisationmap{
-        width: 50%;
-        background-color:#f6b730;
-    }
-    
     
     /* bois buches */
     .sterelivrable{
@@ -717,42 +550,7 @@
 
     .first img {
         width: 100% ;
-    }
-
-    /* localisation */
-    .localisation{
-        display:flex;
-        flex-direction:row;
-        text-align:left;
-        justify-content:space-evenly;
-        margin-left:5%;
-        margin-right:5%;
-        margin-top:50px;
-        margin-bottom:50px;
-    }
-
-    .localisationtext{
-        font-size:150%;
-    }
-    
-    .localisationtext p {
-        margin-top:20px;
-    }
-    
-    .localisationtext img{
-        height: 40px;
-        padding-right:10px;
-    }
-    
-    .localisationtext li{
-        list-style:none;
-    }
-    
-    .localisationmap{
-        width: 50%;
-        background-color:#f6b730;
-    }
-    
+    }    
     
     /* bois buches */
     .sterelivrable{
@@ -859,7 +657,11 @@
     
     /* header */
     .navbar {
-        font-size:125%;
+        font-size:110%;
+    }
+
+    .navbar img{
+        height: 40px;
     }
 
     .change{
@@ -871,6 +673,32 @@
     
     .changers {
         font-size:130%;
+    }
+
+    /* nouveaute */
+
+    .item{
+        width:65%;
+    }
+
+    .item img{
+        width:75%;
+    }
+
+    /* pack economique */
+
+    .itemeconomique{
+        width: 65%;
+    }
+
+    .itemeconomique img{
+        width:75%;
+    }
+
+    /* espace vert */
+
+    .nousrow{
+        margin: 0 5%;
     }
 
     /* nous choisir */
@@ -1046,18 +874,6 @@ th, td {
     transform: translateX(-50%);
 }
 
-.items{
-    display:flex;
-    flex-direction:column;
-    width: calc(33.33% - 20px);
-    padding:20px;
-    border:1px solid black;
-    border-radius:10px;
-    margin-bottom:20px;
-    background-color:rgb(233, 233, 233);
-
-}
-
 .items h1{
     font-size:130%;
     text-align:center;
@@ -1093,13 +909,34 @@ th, td {
 
   }
 
+  @media only screen and (max-width:900px) {
+    
+    /* espace vert */
+
+    .nousrow{
+        font-size:95%;
+
+    }
+
+    .secondnous img{
+        height:500px; 
+        width:110%;
+    }
+
+    .firstnous{
+        width: 40%;
+    }    
+  }
+
   @media only screen and (max-width: 800px) {
+
+    
     .navbar{
         padding-left:0;
         padding-right:0;
     }
 
-        /* conseils */
+    /* conseils */
 
 .conseilstitre{
     text-align:center;
@@ -1184,14 +1021,8 @@ th, td {
 }
 
 .localisation{
-    display:flex;
-    flex-direction:row;
-    text-align:left;
-    justify-content:space-evenly;
     margin-left:2%;
     margin-right:2%;
-    margin-top:50px;
-    margin-bottom:50px;
 }
 
 }
@@ -1205,26 +1036,8 @@ th, td {
         padding-right:0;
     }
 
-    .navbar img{
-        height: 40px;
-    }
-    /* footer */
-    .foot{
-        font-size:100%;
-    }
-    /* body */
-    .containertext{
-        font-size:210%;
-    }
-
-    /* nouveaute */
-    .nouveaute{
-        font-size:150%;
-    }
-    
-    /* pack economique */
-    .economique{
-        font-size:150%;
+    .navbar-nav a {
+        margin-left:0;
     }
     
     /* produits */
@@ -1260,6 +1073,22 @@ th, td {
     .changers {
         font-size:150%;
     }
+
+    /* espace vert */
+
+    .nousrow{
+        font-size:95%;
+        height:500px;
+    }
+
+    .secondnous img{
+        height:500px; 
+        width:110%;
+    }
+
+    .firstnous{
+        width: 40%;
+    } 
     
     /* nous choisir */
     .nouschoisir {
@@ -1284,31 +1113,6 @@ th, td {
     .second{
         width: 100%;
     }
-
-    
-    /* localisation */
-    .localisationtext{
-        font-size:120%;
-    }
-    
-    .localisationtext p {
-        margin-top:20px;
-    }
-    
-    .localisationtext img{
-        height: 40px;
-        padding-right:10px;
-    }
-    
-    .localisationtext li{
-        list-style:none;
-    }
-    
-    .localisationmap{
-        width: 50%;
-        background-color:#f6b730;
-    }
-    
     
     /* bois buches */
 
@@ -1449,9 +1253,79 @@ th, td {
     
   }
 
+  @media only screen and (max-width:700px) {
+
+    /* espace vert */
+
+    .nousrow{
+        font-size:85%;
+        height:400px;
+        margin: 0 1%;
+    }
+
+    .secondnous img{
+        height:400px; 
+        width:110%;
+    }
+
+    .firstnous{
+        width: 40%;
+    } 
+  }
+
+  @media only screen and (max-width: 650px) {
+     /* espace vert */
+
+     .nousrow{
+        font-size:100%;
+        height:400px;
+        margin: 0 10%;
+    }
+
+    .secondnous img{
+        height:0; 
+    }
+
+    .secondnous {
+    width:0;        
+    }
+
+    .firstnous{
+        width: 100%;
+    } 
+  }
+
   @media only screen and (max-width: 600px) {
     .logo{
         display:none;
+    }
+
+    /* carousel button */
+
+    .button1{
+        font-size:90%;
+    }
+    
+    .button2{
+        font-size:80%;
+    }
+
+    /* nouveaute */
+
+    .item{
+        width:75%;
+    }
+
+    /* pack economique */
+
+    .itemeconomique{
+        width: 75%;
+    }
+
+    /* localisation */
+
+    .localisationtext{
+        font-size:90%;
     }
 }
 
@@ -1462,23 +1336,9 @@ th, td {
         font-size:90%;
     }
     
-    /* footer */
-    .foot{
-        font-size:100%;
-    }
     /* body */
     .containertext{
-        font-size:210%;
-    }
-
-    /* nouveaute */
-    .nouveaute{
-        font-size:150%;
-    }
-    
-    /* pack economique */
-    .economique{
-        font-size:150%;
+        font-size:180%;
     }
     
     /* produits */
@@ -1538,31 +1398,6 @@ th, td {
     .second{
         width: 100%;
     }
-
-    
-    /* localisation */
-    .localisationtext{
-        font-size:120%;
-    }
-    
-    .localisationtext p {
-        margin-top:20px;
-    }
-    
-    .localisationtext img{
-        height: 40px;
-        padding-right:10px;
-    }
-    
-    .localisationtext li{
-        list-style:none;
-    }
-    
-    .localisationmap{
-        width: 50%;
-        background-color:#f6b730;
-    }
-    
     
     /* bois buches */
 
@@ -1671,18 +1506,6 @@ th, td {
         transform: translateX(-50%);
     }
     
-    .items{
-        display:flex;
-        flex-direction:column;
-        width: calc(33.33% - 20px);
-        padding:20px;
-        border:1px solid black;
-        border-radius:10px;
-        margin-bottom:20px;
-        background-color:rgb(233, 233, 233);
-    
-    }
-    
     .items h1{
         font-size:110%;
         text-align:center;
@@ -1690,6 +1513,10 @@ th, td {
         height: 60px;
         color:#f6b730;
         margin-bottom:20px;
+    }
+
+    label {
+        font-size:90%;
     }
     
     .others{
@@ -1787,26 +1614,15 @@ th, td {
         font-weight:bold;
     }
 
-    .logo{
-        height: 0px;
-    }
     /* footer */
+
     .foot{
-        font-size:100%;
-    }
-    /* body */
-    .containertext{
-        font-size:210%;
+        padding: 0 10px;
+        font-size:90%;
     }
 
-    /* nouveaute */
-    .nouveaute{
-        font-size:150%;
-    }
-    
-    /* pack economique */
-    .economique{
-        font-size:150%;
+    .logo{
+        height: 0px;
     }
     
     /* produits */
@@ -1870,27 +1686,20 @@ th, td {
     
     /* localisation */
     .localisationtext{
-        font-size:120%;
+        font-size:85%;
     }
     
     .localisationtext p {
-        margin-top:20px;
+        margin-top:10px;
     }
     
     .localisationtext img{
-        height: 40px;
-        padding-right:10px;
+        height:50px;
     }
-    
-    .localisationtext li{
-        list-style:none;
+
+    .localisationlogo{
+        height:30px;
     }
-    
-    .localisationmap{
-        width: 50%;
-        background-color:#f6b730;
-    }
-    
     
     /* bois buches */
 
@@ -2038,19 +1847,6 @@ th, td {
         margin-left:50%;
         transform: translateX(-50%);
     }
-    
-    .items{
-        display:flex;
-        flex-direction:column;
-        width: calc(33.33% - 20px);
-        padding:10px;
-        border:1px solid black;
-        border-radius:10px;
-        margin-bottom:20px;
-        background-color:rgb(233, 233, 233);
-    
-    }
-    
     .items h1{
         font-size:100%;
         text-align:center;
@@ -2058,6 +1854,10 @@ th, td {
         height: 60px;
         color:#f6b730;
         margin-bottom:30px;
+    }
+
+    label {
+        font-size:90%;
     }
 
     .items p {
@@ -2088,5 +1888,15 @@ th, td {
     
     .items button:hover{
         background-color:grey;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .nous h1 {
+        height: 150px;
+    }
+
+    .nousrow{
+        font-size:85%;
     }
   }

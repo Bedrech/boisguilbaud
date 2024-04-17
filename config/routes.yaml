@@ -15,15 +15,7 @@ conseils_index:
 contact_index:
     path: /contact
     controller: App\Controller\ContactController::index
-
-prestation_index:
-    path: /prestation
-    controller: App\Controller\PrestationController::index
-
-espacevert_index:
-    path: /espace_vert
-    controller: App\Controller\EspaceVertController::index
-        
+  
 app_login:
     path: /login
     controller: App\Controller\SecurityController::login

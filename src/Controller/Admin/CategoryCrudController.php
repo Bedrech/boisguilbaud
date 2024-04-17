@@ -3,10 +3,11 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Category;
-use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
+
 
 class CategoryCrudController extends AbstractCrudController
 {
@@ -15,14 +16,22 @@ class CategoryCrudController extends AbstractCrudController
         return Category::class;
     }
 
-    /*
+    public function configureCrud(Crud $crud): Crud
+    {
+        return $crud
+        ->setPageTitle('index', 'Administration des Catégories')
+        ->setPageTitle('new', 'Créer une nouvelle catégorie')
+        ->setPageTitle('edit', 'Modifier une catégorie');
+    }
+
+    
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
-            TextField::new('title'),
-            TextEditorField::new('description'),
+            // IdField::new('id')->setLabel('ID')->hideOnForm(),
+            TextField::new('name')->setLabel('Nom'),
+            TextField::new('slug'),
         ];
     }
-    */
+    
 }

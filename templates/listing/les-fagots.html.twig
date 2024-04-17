@@ -11,7 +11,7 @@
     <section>
 		<div class="allitems">
         {# boucle pour afficher tout les produits de type fagots #}
-            {% for item in fagots %}
+            {% for item in products['fagots'] %}
                 <form class="formitem" action="{{ path('cart_add', { id: item.id }) }}" method="post">
 			    <div class="items">
                     <h1>{{ item.name }}</h1>

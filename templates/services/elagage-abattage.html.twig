@@ -10,7 +10,7 @@
     
     <section>
 	    <div class="allitems">
-            {% for item in elagage %}
+            {% for item in products['elagage'] %}
                 <form class="formitem" action="{{ path('cart_add', { id: item.id }) }}" method="post">
 			        <div class="items">
                         <h1>{{ item.name }}</h1>

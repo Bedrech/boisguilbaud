@@ -2,8 +2,6 @@
 
 namespace App\Controller;
 
-use App\Entity\Category;
-use App\Entity\Products;
 use App\Entity\Services;
 use App\Repository\ProductsRepository;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,14 +13,19 @@ class ServicesController extends AbstractController
     #[Route('/services/{slug}', name: 'app_services')]
     public function index(
         Services $services,
-        ProductsRepository $productsitems
+        ProductsRepository $productsRepository
     ): Response
     {
+        $serviceTypes = ['ramonage', 'elagage', 'rognage'];
+        $products = [];
+
+        foreach ($serviceTypes as $type) {
+            $products[$type] = $productsRepository->findBy(['type' => $type]);
+        }
+
         return $this->render('services/' . $services->getSlug() . '.html.twig', [
             'services' => $services,
-            'ramonage' => $productsitems->findBy(['type' => 'ramonage']),
-            'elagage' => $productsitems->findBy(['type' => 'elagage']),
-            'rognage' => $productsitems->findBy(['type' => 'rognage']),
+            'products' => $products,
         ]);
     }
 }

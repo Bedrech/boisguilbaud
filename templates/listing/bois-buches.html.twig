@@ -11,7 +11,7 @@
 		<section>
 			<div class="allitems">
             {# boucle pour afficher tout les produits de type bois buche #}
-    			{% for item in bois %}
+    			{% for item in products['bois-buche'] %}
 					<form class="formitem" action="{{ path('cart_add', { id: item.id }) }}" method="post">
 						<div class="items">
 							<h1>{{ item.name }}</h1>
@@ -173,11 +173,11 @@
 					<h3>Le choix de nos essences :</h3>
 					<p>
 						Nous commercialisons du
-						<span style="font-weight:bold">bois bûches</span>
+						<span>bois bûches</span>
 						selon vos souhaits. Nous privilégions clairement la production sur les
-						<span style="font-weight:bold">essences catégorie 1,</span>
+						<span>essences catégorie 1,</span>
 						qui est de loin la meilleur adéquation pour le
-						<span style="font-weight:bold">bois de chauffage.</span>
+						<span>bois de chauffage.</span>
 					</p>
 					<p>
 						Il faut évidemment trouver le meilleur ratio en fonction de la gestion durable
@@ -250,7 +250,7 @@
 				l'automne ou en hiver, ou par temps de pluie, prévoir d'avoir toujours un roulement d'un
 				stère et de ranger ce  bois à l'extérieur sous un appentis ou couvert d'une bâche
 				sur le dessus, et non dans un endroit fermé pour un séchage correct.<br><br>
-				<span style="font-weight:bold">Votre cheminée vous en sera reconnaissante et vous
+				<span>Votre cheminée vous en sera reconnaissante et vous
 				apprécierez les longues veillées devant le feu !</span>
 			</p>
 		</section>
