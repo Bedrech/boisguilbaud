@@ -3,8 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\Category;
-use App\Entity\Products;
-use App\Entity\Services;
 use App\Repository\ProductsRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -34,7 +32,7 @@ class ListingController extends AbstractController
         ]);
     }
 
-    #[Route('/{type}', name: 'app_product_listing')]
+    #[Route('/product/{type}', name: 'app_product_listing')]
     public function productListing(
         string $type,
         ProductsRepository $productsRepository

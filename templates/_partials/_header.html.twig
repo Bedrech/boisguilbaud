@@ -10,7 +10,7 @@
                     <div class="dropdown-content">
                         {# boucle pour afficher tout les produits #}
                         {% for item in categories %}
-                        <a href="{{ path('app_listing', {'slug': item.slug} ) }}" class="dropdown-toggle" >
+                            <a href="{{ path('app_listing', {'slug': item.slug} ) }}" class="dropdown-toggle" >
                             {{ item.name }}
                         </a>
                         {% endfor %}

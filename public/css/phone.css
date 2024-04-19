@@ -1,9 +1,4 @@
-@media only screen and (max-width: 2600px) {
-    *{
-        margin:0;
-        padding:0;
-    }
-    
+@media only screen and (max-width: 2600px) {    
     /* header */
     .navbar {
         font-size:140%;
@@ -131,16 +126,8 @@
         margin:0;
         padding:0;
     }
-    
-    /* header */
-    .navbar {
-        font-size:140%;
-    }
-    
+        
     /* produits */
-    .produits{
-        font-size:150%;
-    }
     
     .produits h2{
         font-weight:bold;
@@ -258,24 +245,10 @@
         margin:0;
         padding:0;
     }
-    
-    /* header */
-    .navbar {
-        font-size:140%;
-    }
-    
+        
     /* produits */
     .produits{
         font-size:150%;
-    }
-    
-    .produits h2{
-        font-weight:bold;
-        font-size:150%;
-    }
-    
-    .produits a {
-        font-size:150%; 
     }
 
     
@@ -389,26 +362,11 @@
         margin:0;
         padding:0;
     }
-    
-    /* header */
-    .navbar {
-        font-size:140%;
-    }
-    
+
     /* produits */
     .produits{
         font-size:150%;
     }
-    
-    .produits h2{
-        font-weight:bold;
-        font-size:150%;
-    }
-    
-    .produits a {
-        font-size:150%; 
-    }
-
     
     /* description */
     .description h2{
@@ -515,12 +473,6 @@
     .conseils{
         font-size:150%;
     }
-    
-    /* nos prestations */
-    .firstnous{
-        font-size:110%;
-    }
-    
     /* contact */
     .contactp{
         text-align:center;
@@ -618,11 +570,6 @@
         font-size:150%;
     }
     
-    /* nos prestations */
-    .firstnous{
-        font-size:110%;
-    }
-    
     /* contact */
     .contactp{
         text-align:center;
@@ -698,7 +645,8 @@
     /* espace vert */
 
     .nousrow{
-        margin: 0 5%;
+        margin: 0 2%;
+        font-size:105%;
     }
 
     /* nous choisir */
@@ -909,23 +857,29 @@ th, td {
 
   }
 
-  @media only screen and (max-width:900px) {
+  @media only screen and (max-width:1000px) {
+    /* espace vert */
+
+    .nousrow{
+        font-size:100%;
+    }
+  }
+
+  @media only screen and (max-width:950px) {
     
     /* espace vert */
 
     .nousrow{
         font-size:95%;
-
     }
 
     .secondnous img{
-        height:500px; 
-        width:110%;
+        width:400px;
     }
 
-    .firstnous{
-        width: 40%;
-    }    
+    .secondnousdeux img{
+        width:400px;
+    }
   }
 
   @media only screen and (max-width: 800px) {
@@ -1032,8 +986,6 @@ th, td {
     /* header */
     .navbar {
         font-size:100%;
-        padding-left:0;
-        padding-right:0;
     }
 
     .navbar-nav a {
@@ -1046,7 +998,6 @@ th, td {
     }
     
     .produits h2{
-        font-weight:bold;
         font-size:120%;
     }
     
@@ -1076,20 +1027,14 @@ th, td {
 
     /* espace vert */
 
-    .nousrow{
-        font-size:95%;
-        height:500px;
-    }
-
     .secondnous img{
-        height:500px; 
-        width:110%;
+        width:350px;
     }
 
-    .firstnous{
-        width: 40%;
-    } 
-    
+    .secondnousdeux img{
+        width:350px;
+    }
+
     /* nous choisir */
     .nouschoisir {
         display: flex;
@@ -1239,11 +1184,6 @@ th, td {
     margin-bottom:10px;
 }
     
-    /* nos prestations */
-    .firstnous{
-        font-size:110%;
-    }
-    
     /* contact */
     .contactp{
         text-align:center;
@@ -1254,29 +1194,9 @@ th, td {
   }
 
   @media only screen and (max-width:700px) {
-
     /* espace vert */
 
     .nousrow{
-        font-size:85%;
-        height:400px;
-        margin: 0 1%;
-    }
-
-    .secondnous img{
-        height:400px; 
-        width:110%;
-    }
-
-    .firstnous{
-        width: 40%;
-    } 
-  }
-
-  @media only screen and (max-width: 650px) {
-     /* espace vert */
-
-     .nousrow{
         font-size:100%;
         height:400px;
         margin: 0 10%;
@@ -1284,6 +1204,10 @@ th, td {
 
     .secondnous img{
         height:0; 
+    }
+
+    .secondnousdeux img{
+        height:0;
     }
 
     .secondnous {
@@ -1340,21 +1264,13 @@ th, td {
     .containertext{
         font-size:180%;
     }
-    
-    /* produits */
-    .produits{
-        font-size:140%;
+
+    /* prestation */
+
+    .secondrow{
+        font-size:125%;
     }
-    
-    .produits h2{
-        font-weight:bold;
-        font-size:120%;
-    }
-    
-    .produits a {
-        font-size:130%; 
-    }
-    
+        
     /* description */
     .description h2{
         font-size:250%;
@@ -1623,20 +1539,6 @@ th, td {
 
     .logo{
         height: 0px;
-    }
-    
-    /* produits */
-    .produits{
-        font-size:140%;
-    }
-    
-    .produits h2{
-        font-weight:bold;
-        font-size:120%;
-    }
-    
-    .produits a {
-        font-size:130%; 
     }
     
     /* description */
