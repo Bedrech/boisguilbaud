@@ -28,9 +28,13 @@ class ProductsCrudController extends AbstractCrudController
     }
 
     public function configureFields(string $pageName): iterable
-    {
+{
+    $fields = [
+    ];
+
+    // Personnalisation pour la page de CRUD
+    if ($pageName == Crud::PAGE_INDEX) {
         return [
-            // IdField::new('id')->setLabel('ID')->hideOnForm(),
             TextField::new('name')->setLabel("Nom"),
             ChoiceField::new('type')->setLabel("Type")->setChoices([
                 'Bois bûches' => 'bois-buche',
@@ -61,4 +65,41 @@ class ProductsCrudController extends AbstractCrudController
         ];
     }
     
+
+    // Personnalisation pour la page de création
+    if ($pageName == Crud::PAGE_NEW) {
+        return [
+            IdField::new('id')->setLabel('ID')->hideOnForm(),
+            TextField::new('name')->setLabel("Nom"),
+            ChoiceField::new('type')->setLabel("Type")->setChoices([
+                'Bois bûches' => 'bois-buche',
+                'Granulés de bois' => 'granules-de-bois',
+                'Allumage' => 'allumage',
+                'Cuisson' => 'cuisson',
+                'Four a Pizza' => 'four-a-pizza',
+                'Brazero' => 'brazero',
+            ]),
+            TextareaField::new('description'),
+            TextareaField::new('premierelongueur')->setLabel("Première longueur"),
+            TextareaField::new('deuxiemelongueur')->setLabel("Deuxieme longueur"),
+            TextareaField::new('troisiemelongueur')->setLabel("Troisième longueur"),
+            ChoiceField::new('surplace')->setChoices([
+                'Oui' => 'Sur place',
+                'Non' => ' ',
+            ]),
+            ChoiceField::new('livraison')->setChoices([
+                'Oui' => 'Livraison',
+                'Non' => ' ',
+            ]),
+            IntegerField::new('surplacepremierprix')->setLabel("Prix premier surplace"),
+            IntegerField::new('surplacedeuxiemeprix')->setLabel("Prix deuxieme surplace"),
+            IntegerField::new('surplacetroisiemeprix')->setLabel('Prix troisième surplace'),
+            IntegerField::new('livraisonpremierprix')->setLabel("Prix premier livraison"),
+            IntegerField::new('livraisondeuxiemeprix')->setLabel("Prix deuxieme livraison"),
+            IntegerField::new('livraisontroisiemeprix')->setLabel("Prix troisième livraison"),
+        ];
+    }
+
+    return $fields;
+}    
 }

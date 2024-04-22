@@ -592,6 +592,14 @@
 
 @media only screen and (max-width: 1200px) {
 
+    .nousrowdeux{
+        font-size:100%;
+    }
+
+    .secondnousdeux img {
+        width:500px;
+    }
+
     /* conseils */
 
 .conseils img{
@@ -884,6 +892,9 @@ th, td {
 
   @media only screen and (max-width: 800px) {
 
+    .nousrowdeux{
+        font-size:80%;
+    }
     
     .navbar{
         padding-left:0;
@@ -1202,21 +1213,31 @@ th, td {
         margin: 0 10%;
     }
 
+    .nousrowdeux{
+        font-size:100%;
+        height:400px;
+        margin: 0 10%;
+    }
+
     .secondnous img{
         height:0; 
     }
 
     .secondnousdeux img{
-        height:0;
+        width:0;
     }
 
     .secondnous {
     width:0;        
     }
 
+    .secondnousdeux{
+        width:0;
+    }
+
     .firstnous{
         width: 100%;
-    } 
+    }
   }
 
   @media only screen and (max-width: 600px) {
