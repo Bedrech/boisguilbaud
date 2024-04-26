@@ -6,6 +6,7 @@ use App\Entity\Products;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
@@ -79,6 +80,42 @@ class ProductsCrudController extends AbstractCrudController
                 'Four a Pizza' => 'four-a-pizza',
                 'Brazero' => 'brazero',
             ]),
+            ImageField::new('imageName')->setLabel("Image")->setUploadDir('public/images/items/')->onlyOnForms(),
+            TextareaField::new('description'),
+            TextareaField::new('premierelongueur')->setLabel("Première longueur"),
+            TextareaField::new('deuxiemelongueur')->setLabel("Deuxieme longueur"),
+            TextareaField::new('troisiemelongueur')->setLabel("Troisième longueur"),
+            ChoiceField::new('surplace')->setChoices([
+                'Oui' => 'Sur place',
+                'Non' => ' ',
+            ]),
+            ChoiceField::new('livraison')->setChoices([
+                'Oui' => 'Livraison',
+                'Non' => ' ',
+            ]),
+            IntegerField::new('surplacepremierprix')->setLabel("Prix premier surplace"),
+            IntegerField::new('surplacedeuxiemeprix')->setLabel("Prix deuxieme surplace"),
+            IntegerField::new('surplacetroisiemeprix')->setLabel('Prix troisième surplace'),
+            IntegerField::new('livraisonpremierprix')->setLabel("Prix premier livraison"),
+            IntegerField::new('livraisondeuxiemeprix')->setLabel("Prix deuxieme livraison"),
+            IntegerField::new('livraisontroisiemeprix')->setLabel("Prix troisième livraison"),
+        ];
+    }
+
+    // Personnalisation pour la page de création
+    if ($pageName == Crud::PAGE_EDIT) {
+        return [
+            IdField::new('id')->setLabel('ID')->hideOnForm(),
+            TextField::new('name')->setLabel("Nom"),
+            ChoiceField::new('type')->setLabel("Type")->setChoices([
+                'Bois bûches' => 'bois-buche',
+                'Granulés de bois' => 'granules-de-bois',
+                'Allumage' => 'allumage',
+                'Cuisson' => 'cuisson',
+                'Four a Pizza' => 'four-a-pizza',
+                'Brazero' => 'brazero',
+            ]),
+            ImageField::new('imageName')->setLabel("Image")->setUploadDir('public/images/items/')->onlyOnForms(),
             TextareaField::new('description'),
             TextareaField::new('premierelongueur')->setLabel("Première longueur"),
             TextareaField::new('deuxiemelongueur')->setLabel("Deuxieme longueur"),

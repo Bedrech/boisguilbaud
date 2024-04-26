@@ -16,6 +16,9 @@
 			    <div class="items">
                     <h1>{{ item.name }}</h1>
                     <p class="test">{{ item.description }}</p>
+                    {% if item.imageName is not null %}
+                        <img src="{{ asset('images/items/' ~ item.imageName) }}" alt="{{ item.name }}" class="product-image">
+                    {% endif %}
                     <div class="others">
                         <label>Longueur</label>
                         <select class="longueurSelect">
