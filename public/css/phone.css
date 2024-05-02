@@ -48,10 +48,6 @@
     .sterelivrable{
         font-size:150%;
     }
-
-    .demande{
-        font-size:200%;
-    }
     
     .price table {
         font-size:150%;
@@ -77,14 +73,6 @@
     }
 
     .secondtable table {
-        font-size:150%;
-    }
-    
-    .dernierconseil{
-        font-size:150%;
-    }
-    
-    .dernierconseil h2{
         font-size:150%;
     }
     
@@ -168,10 +156,6 @@
     .sterelivrable{
         font-size:150%;
     }
-
-    .demande{
-        font-size:200%;
-    }
     
     .price table {
         font-size:150%;
@@ -197,14 +181,6 @@
     }
 
     .secondtable table {
-        font-size:150%;
-    }
-    
-    .dernierconseil{
-        font-size:150%;
-    }
-    
-    .dernierconseil h2{
         font-size:150%;
     }
     
@@ -281,10 +257,6 @@
     .sterelivrable{
         font-size:150%;
     }
-
-    .demande{
-        font-size:200%;
-    }
     
     .price table {
         font-size:150%;
@@ -312,14 +284,7 @@
     .secondtable table {
         font-size:150%;
     }
-    
-    .dernierconseil{
-        font-size:150%;
-    }
-    
-    .dernierconseil h2{
-        font-size:150%;
-    }
+        
     
     /* granules de bois */
     
@@ -331,10 +296,6 @@
     
     .fagotsitems p {
         font-size:150%;
-    }
-
-    .demande{
-        height:300px;
     }
     
     /* conseils */
@@ -412,10 +373,6 @@
     .sterelivrable{
         font-size:150%;
     }
-
-    .demande{
-        font-size:200%;
-    }
     
     .price table {
         font-size:150%;
@@ -444,14 +401,6 @@
         font-size:150%;
     }
     
-    .dernierconseil{
-        font-size:150%;
-    }
-    
-    .dernierconseil h2{
-        font-size:150%;
-    }
-    
     /* granules de bois */
     
     .granulesitems p{
@@ -462,10 +411,6 @@
     
     .fagotsitems p {
         font-size:150%;
-    }
-
-    .demande{
-        height:300px;
     }
     
     /* conseils */
@@ -508,10 +453,6 @@
     .sterelivrable{
         font-size:150%;
     }
-
-    .demande{
-        font-size:200%;
-    }
     
     .price table {
         font-size:150%;
@@ -540,14 +481,6 @@
         font-size:150%;
     }
     
-    .dernierconseil{
-        font-size:150%;
-    }
-    
-    .dernierconseil h2{
-        font-size:150%;
-    }
-    
     /* granules de bois */
     
     .granulesitems p{
@@ -558,10 +491,6 @@
     
     .fagotsitems p {
         font-size:150%;
-    }
-
-    .demande{
-        height:300px;
     }
     
     /* conseils */
@@ -575,17 +504,6 @@
         text-align:center;
         padding-bottom:30px;
         font-size:140%;
-    }
-
-    .dernierconseil{
-        background-image: url("../images/planches.jpg");
-        height:105%;
-        color:white;
-        text-shadow: 1px 1px 1px black;
-        text-align:center;
-        padding-top:20px;
-        padding-left:40px;
-        padding-right:40px;
     }
     
 }
@@ -707,21 +625,6 @@
     margin-bottom:40px;
 }
 
-.demande{
-    height:250px;
-    color:white;
-    margin-top:30px;
-    text-shadow:1px 1px 1px black;
-    text-align:center;
-    padding-top:50px;
-    font-size:150%;
-    background-image: url("../images/logs.jpg");
-    background-repeat:no-repeat;
-    background-size:cover;
-    padding-left:30px;
-    padding-right:30px;
-}
-
 .price table {
     border-collapse: collapse;
     width: 70%;
@@ -802,21 +705,6 @@ th, td {
     margin: 0 auto;
     margin-top:50px;
     margin-bottom:50px;
-}
-
-.dernierconseil{
-    background-image: url("../images/planches.jpg");
-    height:105%;
-    color:white;
-    text-shadow: 1px 1px 1px black;
-    text-align:center;
-    padding-top:20px;
-    padding-left:40px;
-    padding-right:40px;
-}
-
-.dernierconseil h2{
-    color:#f6b730;
 }
 
 .allitems{
@@ -1083,10 +971,6 @@ th, td {
     .sterelivrable img{
         height: 200px;
     }
-
-    .demande{
-        font-size:200%;
-    }
     
     .price table {
         font-size:150%;
@@ -1124,14 +1008,6 @@ th, td {
         font-size:150%;
     }
     
-    .dernierconseil{
-        font-size:150%;
-    }
-    
-    .dernierconseil h2{
-        font-size:150%;
-    }
-    
     /* granules de bois */
     
     .granulesitems p{
@@ -1142,12 +1018,7 @@ th, td {
     
     .fagotsitems p {
         font-size:150%;
-    }
-
-    .demande{
-        height:300px;
-    }
-    
+    }    
  
     /* conseils */
 
@@ -1350,10 +1221,6 @@ th, td {
         height: 200px;
     }
 
-    .demande{
-        font-size:200%;
-    }
-    
     .price table {
         font-size:110%;
     }
@@ -1394,10 +1261,6 @@ th, td {
         font-size:125%;
     }
     
-    .dernierconseil h2{
-        font-size:150%;
-    }
-    
     /* granules de bois */
     
     .granulesitems p{
@@ -1408,10 +1271,6 @@ th, td {
     
     .fagotsitems p {
         font-size:150%;
-    }
-
-    .demande{
-        height:100%;
     }
     
     /* conseils */
@@ -1637,10 +1496,6 @@ th, td {
     .sterelivrable img{
         height: 150px;
     }
-
-    .demande{
-        font-size:200%;
-    }
     
     .price table {
         font-size:85%;
@@ -1678,14 +1533,6 @@ th, td {
         font-size:80%;
     }
     
-    .dernierconseil{
-        font-size:125%;
-    }
-    
-    .dernierconseil h2{
-        font-size:150%;
-    }
-    
     /* granules de bois */
     
     .granulesitems p{
@@ -1696,10 +1543,6 @@ th, td {
     
     .fagotsitems p {
         font-size:150%;
-    }
-
-    .demande{
-        height:100%;
     }
     
         /* conseils */

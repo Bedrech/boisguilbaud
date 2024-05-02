@@ -206,7 +206,7 @@ public function sendEmail(
     // Créer l'e-mail
     $email = (new Email())
         ->from($email)
-        ->to('your@email.com')
+        ->to('boisguilbaud@gmail.com')
         ->subject("Commande de $nom")
         ->html($contenuEmail);
 

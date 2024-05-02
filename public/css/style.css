@@ -473,18 +473,17 @@ span {
 }
 
 .demande{
-    height:250px;
     color:white;
-    margin-top:30px;
     text-shadow:1px 1px 1px black;
     text-align:center;
-    padding-top:50px;
     font-size:150%;
     background-image: url("../images/logs.jpg");
     background-repeat:no-repeat;
     background-size:cover;
-    padding-left:30px;
-    padding-right:30px;
+    padding: 20px 30px 20px;
+    margin: 30px 10% 0;
+    border-radius:20px;
+    box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.75);
 }
 
 .price table {
@@ -575,9 +574,10 @@ th, td {
     color:white;
     text-shadow: 1px 1px 1px black;
     text-align:center;
-    padding-top:20px;
-    padding-left:40px;
-    padding-right:40px;
+    padding: 20px 40px;
+    margin: 40px 10%;
+    border-radius:20px;
+    box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.75);
 }
 
 .dernierconseil h2{
