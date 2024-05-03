@@ -923,26 +923,27 @@ th, td {
 .formitem{
     display:flex;
     flex-direction:column;
-    width: calc(33.33% - 20px);
-    padding:20px;
+    width: 80%;
+    padding:5px;
     border:1px solid black;
     border-radius:10px;
     margin-bottom:20px;
     background-color:rgb(233, 233, 233);
 }
 
+.items{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    padding: 0 20px 20px 20px;
+}
+
 .items h1{
     font-size:150%;
     text-align:center;
     font-weight:bold;
-    height: 60px;
+    height: 35px;
     color:#f6b730;
-}
-
-.others{
-    display:flex;
-    flex-direction:column;
-    margin-top: auto;
 }
 
 .items select{
@@ -953,6 +954,7 @@ th, td {
 .items input{
     border: 1px solid black;
     border-radius:5px;
+    width:150px;
 }
 
 .items button{
@@ -962,6 +964,19 @@ th, td {
 
 .items button:hover{
     background-color:grey;
+}
+
+.items img {
+    width:200px;
+    margin:auto;
+    display:block;
+}
+
+.others{
+    display:flex;
+    flex-direction:column;
+    margin-top:30px;
+    margin-left:10px;
 }
 
 /* panier */

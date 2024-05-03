@@ -14,11 +14,13 @@
     			{% for item in products['bois-buche'] %}
 					<form class="formitem" action="{{ path('cart_add', { id: item.id }) }}" method="post">
 						<div class="items">
+							<div class="beforeothers">
 							<h1>{{ item.name }}</h1>
 							<p class="test">{{ item.description }}</p>
 							{% if item.imageName is not null %}
                                 <img src="{{ asset('images/items/' ~ item.imageName) }}" alt="{{ item.name }}" class="product-image">
                             {% endif %}
+							</div>
 							<div class="others">
 								<label>Longueur</label>
 								<select class="longueurSelect">

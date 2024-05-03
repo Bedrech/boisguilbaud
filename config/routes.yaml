@@ -25,37 +25,37 @@ app_logout:
     controller: App\Controller\SecurityController::logout
 
 app_bois_buches:
-    path: /bois-buches
+    path: listing/bois-buches
     controller: App\Controller\ListingController::boisBuches
 
 app_allumage:
-    path: /allumage
+    path: listing/allumage
     controller: App\Controller\ListingController::allumage
     
 app_elagage:
-    path: /elagage
-    controller: App\Controller\ListingController::elagage
+    path: services/elagage-abattage
+    controller: App\Controller\ServicesController::elagage
 
 app_granules:
-    path: /granules
+    path: listing/granules-de-bois
     controller: App\Controller\ListingController::granules
 
 app_fagots:
-    path: /fagots
+    path: listing/fagots
     controller: App\Controller\ListingController::fagots
 
 app_rognage:
-    path: /rognage
-    controller: App\Controller\ListingController::rognage
+    path: services/rognage-de-souche
+    controller: App\Controller\ServicesController::rognage
 
 app_cuisson:
-    path: /cuisson
+    path: listing/cuisson
     controller: App\Controller\ListingController::acuisson
 
 app_pizza:
-    path: /pizza
+    path: listing/pizza
     controller: App\Controller\ListingController::apizza
 
 app_brazero:
-    path: /brazero
+    path: listing/brazero
     controller: App\Controller\ListingController::brazero

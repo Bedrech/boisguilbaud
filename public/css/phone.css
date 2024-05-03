@@ -720,26 +720,6 @@ th, td {
 
 .items h1{
     font-size:130%;
-    text-align:center;
-    font-weight:bold;
-    height: 60px;
-    color:#f6b730;
-}
-
-.others{
-    display:flex;
-    flex-direction:column;
-    margin-top: auto;
-}
-
-.items select{
-    border: 1px solid black;
-    border-radius:5px;
-}
-
-.items input{
-    border: 1px solid black;
-    border-radius:5px;
 }
 
 .items button{
@@ -789,6 +769,18 @@ th, td {
         padding-right:0;
     }
 
+    .formitem{
+        width: 95%;
+    }
+
+    .items input{
+        width:100px;
+    }
+
+    .items select{
+        width:100px;
+    }
+
     /* conseils */
 
 .conseilstitre{
@@ -816,8 +808,6 @@ th, td {
 
 .conseils ul{
     text-align:left;
-    padding-top:20px;
-    padding-bottom:20px;
     border-bottom-left-radius:20px;
     border-bottom:2px solid rgb(102, 102, 102);
     border-left:2px solid rgb(102, 102, 102);
@@ -825,8 +815,7 @@ th, td {
     border-top-right-radius:20px;
     border-top-left-radius:10px;
     border-bottom-right-radius:10px;
-    padding-left:35px;
-    padding-right:5px;
+    padding: 20px 5px 20px 35px;
     margin-bottom:45px;
 }
 
@@ -1043,22 +1032,6 @@ th, td {
     text-decoration:underline;
     font-weight:bold;
     padding-bottom:25px;
-}
-
-.conseils ul{
-    text-align:left;
-    padding-top:20px;
-    padding-bottom:20px;
-    border-bottom-left-radius:20px;
-    border-bottom:2px solid rgb(102, 102, 102);
-    border-left:2px solid rgb(102, 102, 102);
-    box-shadow: 10px -10px 20px 2px rgba(0,0,0,0.66);
-    border-top-right-radius:20px;
-    border-top-left-radius:10px;
-    border-bottom-right-radius:10px;
-    padding-left:35px;
-    padding-right:5px;
-    margin-bottom:45px;
 }
 
 .conseils li{
@@ -1291,53 +1264,20 @@ th, td {
         font-size:140%;
     }
     
-    .allitems{
-        display:flex;
-        flex-wrap: wrap;
-        flex-direction:row;
-        justify-content:space-evenly;
-        width: 95%;
-        margin-top:20px;
-        margin-left:50%;
-        transform: translateX(-50%);
-    }
-    
     .items h1{
         font-size:110%;
-        text-align:center;
-        font-weight:bold;
-        height: 60px;
-        color:#f6b730;
-        margin-bottom:20px;
+    }
+
+    .beforeothers p{
+        font-size:90%;
+    }
+
+    .items img {
+        width: 125px;
     }
 
     label {
         font-size:90%;
-    }
-    
-    .others{
-        display:flex;
-        flex-direction:column;
-        margin-top: auto;
-    }
-    
-    .items select{
-        border: 1px solid black;
-        border-radius:5px;
-    }
-    
-    .items input{
-        border: 1px solid black;
-        border-radius:5px;
-    }
-    
-    .items button{
-        border: 1px solid black;
-        border-radius:5px;
-    }
-    
-    .items button:hover{
-        background-color:grey;
     }
 
     /* ramonage */
@@ -1570,22 +1510,6 @@ th, td {
     padding-bottom:25px;
 }
 
-.conseils ul{
-    text-align:left;
-    padding-top:20px;
-    padding-bottom:20px;
-    border-bottom-left-radius:20px;
-    border-bottom:2px solid rgb(102, 102, 102);
-    border-left:2px solid rgb(102, 102, 102);
-    box-shadow: 10px -10px 20px 2px rgba(0,0,0,0.66);
-    border-top-right-radius:20px;
-    border-top-left-radius:10px;
-    border-bottom-right-radius:10px;
-    padding-left:35px;
-    padding-right:5px;
-    margin-bottom:45px;
-}
-
 .conseils li{
     padding-top:10px;
     margin-bottom:10px;
@@ -1615,11 +1539,6 @@ th, td {
     }
     .items h1{
         font-size:100%;
-        text-align:center;
-        font-weight:bold;
-        height: 60px;
-        color:#f6b730;
-        margin-bottom:30px;
     }
 
     label {
@@ -1628,22 +1547,6 @@ th, td {
 
     .items p {
         font-size:80%;
-    }
-    
-    .others{
-        display:flex;
-        flex-direction:column;
-        margin-top: auto;
-    }
-    
-    .items select{
-        border: 1px solid black;
-        border-radius:5px;
-    }
-    
-    .items input{
-        border: 1px solid black;
-        border-radius:5px;
     }
     
     .items button{
