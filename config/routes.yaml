@@ -36,6 +36,10 @@ app_elagage:
     path: services/elagage-abattage
     controller: App\Controller\ServicesController::elagage
 
+app_ramonage:
+    path: services/ramonage
+    controller: App\Controller\ServicesController::ramonage
+
 app_granules:
     path: listing/granules-de-bois
     controller: App\Controller\ListingController::granules
@@ -57,5 +61,5 @@ app_pizza:
     controller: App\Controller\ListingController::apizza
 
 app_brazero:
-    path: listing/brazero
+    path: listing/brasero
     controller: App\Controller\ListingController::brazero
