@@ -42,11 +42,14 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToCrud('Catégories', 'fas fa-list', Category::class),
                 MenuItem::linkToCrud('Services', 'fas fa-list', Services::class),       
             
-                MenuItem::section('Gestion des produits'),
+            MenuItem::section('Gestion des produits'),
                 MenuItem::linkToCrud('Produits', 'fas fa-list', Products::class),
             
-                MenuItem::section('Gestion des changers'),
+            MenuItem::section('Gestion des changers'),
                 MenuItem::linkToCrud('Changers', 'fas fa-list', Changers::class),
+            
+            MenuItem::section('Gestion des produits'),
+                MenuItem::linkToCrud('Utilisateurs', 'fas fa-list', User::class),
         ];
     }
 

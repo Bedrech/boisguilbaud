@@ -1089,3 +1089,10 @@ th, td {
 .formlogin input{
     margin-bottom:20px;
 }
+
+/* reset password */
+
+.resetpassword {
+    padding-top:100px;
+    text-align:center;
+}

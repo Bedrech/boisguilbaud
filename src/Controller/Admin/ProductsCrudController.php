@@ -64,6 +64,7 @@ class ProductsCrudController extends AbstractCrudController
             IntegerField::new('livraisonpremierprix')->setLabel("Prix<br>premier<br>livraison"),
             IntegerField::new('livraisondeuxiemeprix')->setLabel("Prix<br>deuxieme<br>livraison"),
             IntegerField::new('livraisontroisiemeprix')->setLabel("Prix<br>troisième<br>livraison"),
+            AssociationField::new('relation')->setLabel('Categorie'),
         ];
     }
     

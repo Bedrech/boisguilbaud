@@ -24,7 +24,6 @@ class ServicesController extends AbstractController
         }
 
         return $this->render('services/' . $services->getSlug() . '.html.twig', [
-            'services' => $services,
             'products' => $products,
         ]);
     }

@@ -11,7 +11,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ArticlesController extends AbstractController
 {
     #[Route('/{slug}', name: 'articles.index', methods: ['GET'])]
-    public function index(ArticlesRepository $articles, string $slug): Response
+    public function index(
+        ArticlesRepository $articles,
+         string $slug
+         ): Response
     {
         // On trouve l'article par son slug
         $article = $articles->findOneBy(['slug' => $slug]);

@@ -20,14 +20,13 @@ class ListingController extends AbstractController
             'bois-buche', 'allumage', 'elagage', 'granules', 'fagots', 'rognage-souche',
             'cuisson', 'four-a-pizza', 'brazero'
         ];
-
+        
         $products = [];
         foreach ($types as $type) {
             $products[$type] = $productsRepository->findBy(['type' => $type]);
         }
         
         return $this->render('listing/' . $category->getSlug() . '.html.twig', [
-            'category' => $category,
             'products' => $products,
         ]);
     }

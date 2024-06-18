@@ -48,7 +48,6 @@ class CartController extends AbstractController
 
     #[Route('/add/{id}', name: 'add')]
     public function add(
-        
         Products $products,
         SessionInterface $session,
         Request $request
@@ -62,7 +61,6 @@ class CartController extends AbstractController
 
         $quantite = $request->request->get('quantite');
         $prixFinal = $request->request->get('prixfinal');
-
 
         // on ajoute le produit dans le paneir s'il n'y est pas encore
         // sinon on incrémente sa quantité
@@ -78,7 +76,6 @@ class CartController extends AbstractController
             $panier[$id]['prix_final'] = $prixFinal;
         }
 
-
         $session->set('panier', $panier);
         // on redirige vers la page du panier
         return $this->redirectToRoute('cart_index',);
@@ -88,7 +85,6 @@ class CartController extends AbstractController
     public function remove(
         Products $products,
         SessionInterface $session,
-        Request $request
     ): Response
     {
         // on récupère l'id du produit
@@ -117,7 +113,6 @@ class CartController extends AbstractController
     public function delete(
         Products $products,
         SessionInterface $session,
-        Request $request
     ): Response
     {
         // on récupère l'id du produit
