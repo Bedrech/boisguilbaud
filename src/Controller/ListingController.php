@@ -13,7 +13,7 @@ class ListingController extends AbstractController
     #[Route('/listing/{slug}', name: 'app_listing')]
     public function index(
         Category $category,
-        ProductsRepository $productsRepository
+        ProductsRepository $productsRepository,
     ): Response
     {
         $types = [
@@ -25,23 +25,10 @@ class ListingController extends AbstractController
         foreach ($types as $type) {
             $products[$type] = $productsRepository->findBy(['type' => $type]);
         }
-
+        
         return $this->render('listing/' . $category->getSlug() . '.html.twig', [
             'category' => $category,
             'products' => $products,
-        ]);
-    }
-
-    #[Route('/product/{type}', name: 'app_product_listing')]
-    public function productListing(
-        string $type,
-        ProductsRepository $productsRepository
-    ): Response
-    {
-        $products = $productsRepository->findBy(['type' => $type]);
-
-        return $this->render('listing/' . $type . '.html.twig', [
-            $type => $products,
         ]);
     }
 }

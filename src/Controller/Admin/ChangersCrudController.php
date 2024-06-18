@@ -27,7 +27,7 @@ class ChangersCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            // IdField::new('id')->setLabel('ID')->hideOnForm(),
+            IdField::new('id')->setLabel('ID')->hideOnForm(),
             IntegerField::new('annee')->setLabel("Années"),
             IntegerField::new('livraisons')->setLabel("Livraisons"),
             IntegerField::new('chantier')->setLabel("Chantiers"),

@@ -32,7 +32,6 @@ class CartFormType extends AbstractType
                     'message' => 'Veuillez entrer votre nom'
                 ]),
             ]
-            
         ])
 
         ->add('email', EmailType::class, [
@@ -59,6 +58,10 @@ class CartFormType extends AbstractType
                     'message' => 'Veuillez entrer votre numéro de téléphone'
                 ])
             ],
+            new Regex([
+                'pattern' => '/^[0-9]{10}$/',
+                'message' => 'Le numéro de téléphone doit contenir 10 chiffres.'
+            ])
         ])
 
         ->add('adresse', TextType::class, [

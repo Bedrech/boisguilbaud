@@ -9,10 +9,10 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class ChangersController extends AbstractController
 {
-    public function index(ChangersRepository $changers): Response
+    public function index(): Response
     {
         return $this->render('main/index.html.twig', [
-            'changers' => $changers->findAll(),
+            'controller_name' => 'ChangersController',
         ]);
     }
 }

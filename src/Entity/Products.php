@@ -73,6 +73,9 @@ class Products
  */
 private $updatedAt;
 
+#[ORM\ManyToOne(inversedBy: 'products')]
+private ?Category $relation = null;
+
 /**
  * @return \DateTime
  */
@@ -285,6 +288,18 @@ public function getUpdatedAt()
     public function setLivraisonTroisiemePrix(float $livraisontroisiemeprix): static
     {
         $this->livraisontroisiemeprix = $livraisontroisiemeprix;
+
+        return $this;
+    }
+
+    public function getRelation(): ?Category
+    {
+        return $this->relation;
+    }
+
+    public function setRelation(?Category $relation): static
+    {
+        $this->relation = $relation;
 
         return $this;
     }

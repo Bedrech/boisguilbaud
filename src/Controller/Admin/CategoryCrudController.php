@@ -15,20 +15,11 @@ class CategoryCrudController extends AbstractCrudController
     {
         return Category::class;
     }
-
-    public function configureCrud(Crud $crud): Crud
-    {
-        return $crud
-        ->setPageTitle('index', 'Administration des Catégories')
-        ->setPageTitle('new', 'Créer une nouvelle catégorie')
-        ->setPageTitle('edit', 'Modifier une catégorie');
-    }
-
-    
+        
     public function configureFields(string $pageName): iterable
     {
         return [
-            // IdField::new('id')->setLabel('ID')->hideOnForm(),
+            IdField::new('id')->setLabel('ID')->hideOnForm(),
             TextField::new('name')->setLabel('Nom'),
             TextField::new('slug'),
         ];

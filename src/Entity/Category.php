@@ -25,6 +25,17 @@ class Category
 
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
+
+    /**
+     * @var Collection<int, Products>
+     */
+    #[ORM\OneToMany(targetEntity: Products::class, mappedBy: 'relation')]
+    private Collection $products;
+
+    public function __construct()
+    {
+        $this->products = new ArrayCollection();
+    }
     
     public function getId(): ?int
     {
@@ -58,4 +69,34 @@ class Category
     /**
      * @return Collection<int, Property>
      */
+
+    /**
+     * @return Collection<int, Products>
+     */
+    public function getProducts(): Collection
+    {
+        return $this->products;
+    }
+
+    public function addProduct(Products $product): static
+    {
+        if (!$this->products->contains($product)) {
+            $this->products->add($product);
+            $product->setRelation($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProduct(Products $product): static
+    {
+        if ($this->products->removeElement($product)) {
+            // set the owning side to null (unless already changed)
+            if ($product->getRelation() === $this) {
+                $product->setRelation(null);
+            }
+        }
+
+        return $this;
+    }
 }

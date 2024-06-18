@@ -2,7 +2,6 @@
 namespace App\Form;
 
 use App\Entity\Contact;
-use PHPUnit\Framework\Constraint\IsTrue;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -11,7 +10,6 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Regex;
 
@@ -42,7 +40,11 @@ class ContactType extends AbstractType {
                     new NotBlank([
                         'message' => 'Veuillez entrer votre email'
                     ]),
-                ]
+                    new Regex([
+                        'pattern' => '/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/',
+                        'message' => 'Veuillez entrer une adresse email valide.'
+                    ])
+                ],
             ])
 
             ->add('phone', TextType::class, [
@@ -54,6 +56,10 @@ class ContactType extends AbstractType {
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Veuillez entrer votre numéro de téléphone'
+                    ]),
+                    new Regex([
+                        'pattern' => '/^[0-9]{10}$/',
+                        'message' => 'Le numéro de téléphone doit contenir 10 chiffres.'
                     ])
                 ],
             ])

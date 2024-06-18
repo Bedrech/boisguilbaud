@@ -1,132 +1,62 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Allumage{% endblock %}
+{% block title %}Allumage
+{% endblock %}
 
 {% block body %}
 	<main>
-    <section class="titre">
-        <h1>Allumage</h1>
-    </section>
-    
-    <section>
-		<div class="allitems">
-        {# boucle pour afficher tout les produits de type allumage #}
-            {% for item in products['allumage'] %}
-                <form class="formitem" action="{{ path('cart_add', { id: item.id }) }}" method="post">
-			        <div class="items">
-                    <h1>{{ item.name }}</h1>
-                    <p class="test">{{ item.description }}</p>
-                    {% if item.imageName is not null %}
-                        <img src="{{ asset('images/items/' ~ item.imageName) }}" alt="{{ item.name }}" class="product-image">
-                    {% endif %}
-                        <div class="others">
-                            <label>Longueur</label>
-                            <select class="longueurSelect">
-                                {% if item.premierelongueur is not null and item.premierelongueur is not empty %}
-                                    <option value="{{ item.surplacepremierprix }}">{{ item.premierelongueur }}</option>
-                                {% endif %}
-                                {% if item.deuxiemelongueur is not null and item.deuxiemelongueur is not empty %}
-                                    <option value="{{ item.surplacedeuxiemeprix }}">{{ item.deuxiemelongueur }}</option>
-                                {% endif %}
-                                {% if item.troisiemelongueur is not null and item.troisiemelongueur is not empty %}
-                                    <option value="{{ item.surplacetroisiemeprix }}">{{ item.troisiemelongueur }}</option>
-                                {% endif %}
-                            </select>
-                            <label>Livraison</label>
-                            <select class="livraisonSelect">
-                                {% if item.surplace is not null and item.surplace is not empty %}
-                                    <option value="{{ item.livraisonpremierprix }}">{{ item.surplace }}</option>
-                                {% endif %}
-                                {% if item.livraison is not null and item.livraison is not empty %}
-                                    <option value="{{ item.livraisondeuxiemeprix }}">{{ item.livraison }}</option>
-                                {% endif %} 
-                            </select>
-                            <label>Quantité</label>
-                            <input type="number" name="quantite" class="quantite">
-                            <p name="priceDisplay" class="priceDisplay">Prix : 0 €</p>
-                            <input type="hidden" name="prixfinal" class="prixfinal">
-                            <button type="submit">Commander</button>
-                        </div>
-                    </div>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const livraisonSelects = document.querySelectorAll(".livraisonSelect");
-                const longueurSelects = document.querySelectorAll(".longueurSelect");
-                const quantiteInputs = document.querySelectorAll(".quantite");
-                const priceDisplay = document.querySelectorAll(".priceDisplay");
-
-                livraisonSelects.forEach((livraisonSelect, index) => {
-                    livraisonSelect.addEventListener("change", function () {
-                        updateLongueurOptions(index);
-                        updatePrice(index);
-                    });
-                });
-
-                longueurSelects.forEach((longueurSelect, index) => {
-                    longueurSelect.addEventListener("change", () => updatePrice(index));
-                });
-
-                quantiteInputs.forEach((quantiteInput, index) => {
-                    quantiteInput.addEventListener("input", () => updatePrice(index));
-                });
-
-
-
-                function updatePrice(index) {
-					const selectOptionLongueur = parseFloat(longueurSelects[index].value);
-					const quantite = parseInt(quantiteInputs[index].value) || 0;
-					const prixUnitaire = selectOptionLongueur;
-					
-					const totalPrice = prixUnitaire * quantite;
-
-					priceDisplay[index].textContent = totalPrice.toFixed(2) + " €";
-
-					const prixfinal = document.querySelectorAll(".prixfinal")[index];
-					prixfinal.value = prixUnitaire;
-				}
-
-                // change le prix si l'utilisateur choisi l'option Livraison
-                function updateLongueurOptions(index) {
-                    const selectedLivraisonValue = livraisonSelects[index].value;
-
-
-                    if (selectedLivraisonValue === "{{ item.livraisonpremierprix }}") {
-                        longueurSelects[index].innerHTML = `
-                            {% if item.premierelongueur is not null and item.premierelongueur is not empty %}
-                                <option value="{{ item.surplacepremierprix }}">{{ item.premierelongueur }}</option>
-                            {% endif %}
-                            {% if item.deuxiemelongueur is not null and item.deuxiemelongueur is not empty %}
-                                <option value="{{ item.surplacedeuxiemeprix }}">{{ item.deuxiemelongueur }}</option>
-                            {% endif %}
-                            {% if item.troisiemelongueur is not null and item.troisiemelongueur is not empty %}
-                                <option value="{{ item.surplacetroisiemeprix }}">{{ item.troisiemelongueur }}</option>
-                            {% endif %}
-                        `;
-                    } else if (selectedLivraisonValue === "{{ item.livraisondeuxiemeprix }}") {
-                        longueurSelects[index].innerHTML = `
-                            {% if item.premierelongueur is not null and item.premierelongueur is not empty %}
-                                <option value="{{ item.livraisonpremierprix }}">{{ item.premierelongueur }}</option>
-                            {% endif %}
-                            {% if item.deuxiemelongueur is not null and item.deuxiemelongueur is not empty %}
-                                <option value="{{ item.livraisondeuxiemeprix }}">{{ item.deuxiemelongueur }}</option>
-                            {% endif %}
-                            {% if item.troisiemelongueur is not null and item.troisiemelongueur is not empty %}
-                                <option value="{{ item.livraisontroisiemeprix }}">{{ item.troisiemelongueur }}</option>
-                            {% endif %}
-                        `;
-                    }
-                }
-            });
-        </script>
-
-				</form>
-    {% endfor %}
-</div>
+		<section class="titre">
+			<h1>Allumage</h1>
 		</section>
 
-
-    <section class="granulesitems">
-        <p>Pour vous faciliter l’allumage de vos feux. Nous vous proposons un allumage de qualité.</p>
-    </section>
-    </main>
+		<section>
+			<div
+				class="allitems">
+				{# boucle pour afficher tout les produits de type allumage #}
+				{% for item in products['allumage'] %}
+					<form class="formitem" action="{{ path('cart_add', { id: item.id }) }}" method="post">
+						<div class="items">
+							<h1>{{ item.name }}</h1>
+							<p class="test">{{ item.description }}</p>
+							{% if item.imageName is not null %}
+								<img src="{{ asset('images/items/' ~ item.imageName) }}" alt="{{ item.name }}" class="product-image">
+							{% endif %}
+							<div class="others">
+								<label>Longueur</label>
+								<select class="longueurSelect">
+									{% if item.premierelongueur is not null and item.premierelongueur is not empty %}
+										<option value="{{ item.surplacepremierprix }}">{{ item.premierelongueur }}</option>
+									{% endif %}
+									{% if item.deuxiemelongueur is not null and item.deuxiemelongueur is not empty %}
+										<option value="{{ item.surplacedeuxiemeprix }}">{{ item.deuxiemelongueur }}</option>
+									{% endif %}
+									{% if item.troisiemelongueur is not null and item.troisiemelongueur is not empty %}
+										<option value="{{ item.surplacetroisiemeprix }}">{{ item.troisiemelongueur }}</option>
+									{% endif %}
+								</select>
+								<label>Livraison</label>
+								<select class="livraisonSelect">
+									{% if item.surplace is not null and item.surplace is not empty %}
+										<option value="{{ item.livraisonpremierprix }}">{{ item.surplace }}</option>
+									{% endif %}
+									{% if item.livraison is not null and item.livraison is not empty %}
+										<option value="{{ item.livraisondeuxiemeprix }}">{{ item.livraison }}</option>
+									{% endif %}
+								</select>
+								<label>Quantité</label>
+								<input type="number" name="quantite" class="quantite">
+								<p name="priceDisplay" class="priceDisplay">Prix : 0 €</p>
+								<input type="hidden" name="prixfinal" class="prixfinal">
+								<button type="submit">Commander</button>
+							</div>
+						</div>
+					</form>
+				{% endfor %}
+			</div>
+		</section>
+		<section class="granulesitems">
+			<p>Pour vous faciliter l’allumage de vos feux. Nous vous proposons un allumage de qualité.</p>
+		</section>
+	</main>
+	<script src="{{ asset('js/listing.js') }}"></script>
 {% endblock %}

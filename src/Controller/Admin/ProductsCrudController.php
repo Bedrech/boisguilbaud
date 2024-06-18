@@ -10,6 +10,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
 class ProductsCrudController extends AbstractCrudController
@@ -99,6 +100,7 @@ class ProductsCrudController extends AbstractCrudController
             IntegerField::new('livraisonpremierprix')->setLabel("Prix premier livraison"),
             IntegerField::new('livraisondeuxiemeprix')->setLabel("Prix deuxieme livraison"),
             IntegerField::new('livraisontroisiemeprix')->setLabel("Prix troisième livraison"),
+            AssociationField::new('relation')->setLabel('Catégorie'),
         ];
     }
 
@@ -134,6 +136,7 @@ class ProductsCrudController extends AbstractCrudController
             IntegerField::new('livraisonpremierprix')->setLabel("Prix premier livraison"),
             IntegerField::new('livraisondeuxiemeprix')->setLabel("Prix deuxieme livraison"),
             IntegerField::new('livraisontroisiemeprix')->setLabel("Prix troisième livraison"),
+            AssociationField::new('relation')->setLabel('Catégorie'),
         ];
     }
 

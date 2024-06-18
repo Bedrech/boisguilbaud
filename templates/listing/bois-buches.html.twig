@@ -1,25 +1,27 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Bois Bûches{% endblock %}
+{% block title %}Bois Bûches
+{% endblock %}
 
 {% block body %}
 	<main>
 		<section class="titre">
 			<h1>Bois Bûches</h1>
 		</section>
-		
+
 		<section>
-			<div class="allitems">
-            {# boucle pour afficher tout les produits de type bois buche #}
-    			{% for item in products['bois-buche'] %}
+			<div
+				class="allitems">
+				{# boucle pour afficher tout les produits de type bois buche #}
+				{% for item in products['bois-buche'] %}
 					<form class="formitem" action="{{ path('cart_add', { id: item.id }) }}" method="post">
 						<div class="items">
 							<div class="beforeothers">
-							<h1>{{ item.name }}</h1>
-							<p class="test">{{ item.description }}</p>
-							{% if item.imageName is not null %}
-                                <img src="{{ asset('images/items/' ~ item.imageName) }}" alt="{{ item.name }}" class="product-image">
-                            {% endif %}
+								<h1>{{ item.name }}</h1>
+								<p class="test">{{ item.description }}</p>
+								{% if item.imageName is not null %}
+									<img src="{{ asset('images/items/' ~ item.imageName) }}" alt="{{ item.name }}" class="product-image">
+								{% endif %}
 							</div>
 							<div class="others">
 								<label>Longueur</label>
@@ -49,80 +51,10 @@
 								<input type="hidden" name="prixfinal" class="prixfinal">
 								<button type="submit">Commander</button>
 							</div>
-					</div>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const livraisonSelects = document.querySelectorAll(".livraisonSelect");
-                const longueurSelects = document.querySelectorAll(".longueurSelect");
-                const quantiteInputs = document.querySelectorAll(".quantite");
-                const priceDisplay = document.querySelectorAll(".priceDisplay");
-
-                livraisonSelects.forEach((livraisonSelect, index) => {
-                    livraisonSelect.addEventListener("change", function () {
-                        updateLongueurOptions(index);
-                        updatePrice(index);
-                    });
-                });
-
-                longueurSelects.forEach((longueurSelect, index) => {
-                    longueurSelect.addEventListener("change", () => updatePrice(index));
-                });
-
-                quantiteInputs.forEach((quantiteInput, index) => {
-                    quantiteInput.addEventListener("input", () => updatePrice(index));
-                });
-
-
-
-                function updatePrice(index) {
-					const selectOptionLongueur = parseFloat(longueurSelects[index].value);
-					const quantite = parseInt(quantiteInputs[index].value) || 0;
-					const prixUnitaire = selectOptionLongueur;
-					
-					const totalPrice = prixUnitaire * quantite;
-
-					priceDisplay[index].textContent = totalPrice.toFixed(2) + " €";
-
-					const prixfinal = document.querySelectorAll(".prixfinal")[index];
-					prixfinal.value = prixUnitaire;
-				}
-
-				// change le prix si l'utilisateur choisi l'option Livraison
-                function updateLongueurOptions(index) {
-                    const selectedLivraisonValue = livraisonSelects[index].value;
-
-                    if (selectedLivraisonValue === "{{ item.livraisonpremierprix }}") {
-                        longueurSelects[index].innerHTML = `
-                            {% if item.premierelongueur is not null and item.premierelongueur is not empty %}
-                                <option value="{{ item.surplacepremierprix }}">{{ item.premierelongueur }}</option>
-                            {% endif %}
-                            {% if item.deuxiemelongueur is not null and item.deuxiemelongueur is not empty %}
-                                <option value="{{ item.surplacedeuxiemeprix }}">{{ item.deuxiemelongueur }}</option>
-                            {% endif %}
-                            {% if item.troisiemelongueur is not null and item.troisiemelongueur is not empty %}
-                                <option value="{{ item.surplacetroisiemeprix }}">{{ item.troisiemelongueur }}</option>
-                            {% endif %}
-                        `;
-                    } else if (selectedLivraisonValue === "{{ item.livraisondeuxiemeprix }}") {
-                        longueurSelects[index].innerHTML = `
-                            {% if item.premierelongueur is not null and item.premierelongueur is not empty %}
-                                <option value="{{ item.livraisonpremierprix }}">{{ item.premierelongueur }}</option>
-                            {% endif %}
-                            {% if item.deuxiemelongueur is not null and item.deuxiemelongueur is not empty %}
-                                <option value="{{ item.livraisondeuxiemeprix }}">{{ item.deuxiemelongueur }}</option>
-                            {% endif %}
-                            {% if item.troisiemelongueur is not null and item.troisiemelongueur is not empty %}
-                                <option value="{{ item.livraisontroisiemeprix }}">{{ item.troisiemelongueur }}</option>
-                            {% endif %}
-                        `;
-                    }
-                }
-            });
-        </script>
-
-				</form>
-    {% endfor %}
-</div>
+						</div>
+					</form>
+				{% endfor %}
+			</div>
 		</section>
 
 		<section class="sterelivrable">
@@ -202,9 +134,13 @@
 				l'automne ou en hiver, ou par temps de pluie, prévoir d'avoir toujours un roulement d'un
 				stère et de ranger ce  bois à l'extérieur sous un appentis ou couvert d'une bâche
 				sur le dessus, et non dans un endroit fermé pour un séchage correct.<br><br>
-				<span>Votre cheminée vous en sera reconnaissante et vous
-				apprécierez les longues veillées devant le feu !</span>
+				<span>
+					Votre cheminée vous en sera reconnaissante et vous
+					apprécierez les longues veillées devant le feu !
+				</span>
 			</p>
 		</section>
 	</main>
+	<script src="{{ asset('js/listing.js') }}"></script>
+
 {% endblock %}
