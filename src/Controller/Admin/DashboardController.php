@@ -18,8 +18,8 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 
 class DashboardController extends AbstractDashboardController
 {
-    #[IsGranted('ROLE_ADMIN')]
     #[Route('/admin', name: 'admin')]
+    #[IsGranted('ROLE_ADMIN')]
     public function index(): Response
     {
         $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);
@@ -48,7 +48,7 @@ class DashboardController extends AbstractDashboardController
             MenuItem::section('Gestion des changers'),
                 MenuItem::linkToCrud('Changers', 'fas fa-list', Changers::class),
             
-            MenuItem::section('Gestion des produits'),
+            MenuItem::section('Gestion des utilisateurs'),
                 MenuItem::linkToCrud('Utilisateurs', 'fas fa-list', User::class),
         ];
     }

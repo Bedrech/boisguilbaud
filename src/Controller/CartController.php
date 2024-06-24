@@ -31,17 +31,17 @@ class CartController extends AbstractController
 
         foreach ($panier as $id => $element) {
             $product = $productsRepository->find($id);
-            $quantite = $element['quantite'];
-            $prixFinal = $element['prixFinal'];
-            
+            $quantite = intval($element['quantite']); 
+            $prixFinal = floatval($element['prixFinal']); 
+        
             $data[] = [
                 'product' => $product,
                 'quantite' => $quantite,
                 'prixFinal' => $prixFinal,
             ];
-            // On calcule le total pour chaque produit et on l'ajoute au total général
             $total += $prixFinal * $quantite;
         }
+        
         
         return $this->render('cart/index.html.twig', compact('data', 'total'));
     }

@@ -913,8 +913,6 @@ th, td {
         font-size:150%;
     }
 
-    /* espace vert */
-
     .secondnous img{
         width:350px;
     }
@@ -925,13 +923,6 @@ th, td {
 
     /* nous choisir */
     .nouschoisir {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        height: 100%;
-        text-align: center;
-        margin-top: 50px;
-        width: 100%;
         font-size:130%;
     }
     
